@@ -83,6 +83,8 @@ export default defineConfig({
   ],
 
   image: {
+    responsiveStyles: true,
+    layout: 'constrained',
     domains: ['cdn.pixabay.com'],
   },
 
