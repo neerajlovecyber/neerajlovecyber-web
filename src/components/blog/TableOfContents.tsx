@@ -73,24 +73,24 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headings = [], title 
       </div>
       <style>{`
         .toc-container a {
-          color: #1a1a1a !important; /* High contrast for light mode */
+          color: #FFF !important; /* High contrast for light mode */
           text-decoration: none !important;
           transition: color 0.15s;
         }
         .toc-container a:hover {
-          color: #fff !important; /* Strong blue for hover in light mode */
+          color: #FA003F !important; /* Strong blue for hover in light mode */
         }
         .toc-item a {
-          color: #fff !important;
+          color: #FFF !important;
         }
         .toc-item a:hover {
-          color: #fff !important;
+          color: #FA003F !important;
         }
         :global(.dark) .toc-container a {
-          color: #fff !important; /* Pure white for all headings in dark mode */
+          color: #FA003F !important; /* Pure white for all headings in dark mode */
         }
         :global(.dark) .toc-container a:hover {
-          color: #fff !important; /* Blue-400 for hover in dark mode */
+          color: #FA003F !important; /* Blue-400 for hover in dark mode */
         }
         :global(.dark) .toc-item a {
           color: #fff !important;
@@ -99,7 +99,10 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headings = [], title 
           color: #fff !important;
         }
         .toc-item.ml-4 a {
-          color: #fff !important;
+          color: #fff !important; 
+        }
+           .toc-item.ml-4 a:hover {
+          color: #FA003F !important; 
         }
         :global(.dark) .toc-item.ml-4 a {
           color: #fff !important; /* Pure white for sub-items in dark mode */
