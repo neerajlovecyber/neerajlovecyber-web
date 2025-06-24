@@ -9,7 +9,7 @@ import type { Post } from '~/types';
 import AdBannerBottom from '~/components/ads/AdBannerBottom.astro';
 import AdBanner from '~/components/ads/AdBanner.astro';
 import Breadcrumbs from '~/components/common/Breadcrumbs.astro';
-import TableOfContents from '~/components/blog/TableOfContents.astro';
+import TableOfContents from '~/components/blog/TableOfContents.tsx';
 
 import { findImageWithFallback } from '~/utils/images';
 export interface Props {
@@ -110,7 +110,7 @@ const { post, url, breadcrumbItems = [], headings = [], showTOC = true } = Astro
     <div
       class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-md lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px] prose-li:my-0"
     >
-      {showTOC && <TableOfContents headings={headings} class="mt-0 mb-4" />}
+      {showTOC && <TableOfContents headings={headings} className="mt-0 mb-4" client:load />}
       <slot />
       <AdBannerBottom />
     </div>
