@@ -1,6 +1,6 @@
 ---
 publishDate: 2025-06-24T00:00:00Z
-title: 'CTF Cheatsheet / Checklist / Guide'
+title: 'A quick guide to CTF (Capture The Flag) - CTF Cheatsheet - Checklist - Guide'
 excerpt: A practical cheatsheet, checklist, and guide for CTF (Capture The Flag) competitions, covering essential techniques, tools, and tips for all major challenge categories.
 image: ~/assets/images/posts/ctf-cheatsheet.png
 tags:
@@ -17,50 +17,9 @@ metadata:
 A list of [Capture The Flag](https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security) (CTF) frameworks, libraries, resources and software for started/experienced CTF players 🚩
 
 
-# Create
+## Solve
 
-*Tools used for creating CTF challenges*
-
-## Platforms
-
-*Frameworks that can be used to host a CTF*
-
- - [CTFd](https://github.com/CTFd/CTFd) \- Platform to host jeopardy style CTFs.
- - [FBCTF](https://github.com/facebookarchive/fbctf) \- Facebook CTF platform to host Jeopardy and "King of the Hill\" CTF competitions.
- - [HackTheArch](https://github.com/mcpa-stlouis/hack-the-arch) \- Scoring server for CTF competitions.
- - [kCTF](https://github.com/google/kctf) \- Kubernetes-based infrastructure for CTF competitions.
- - [LibreCTF](https://github.com/easyctf/librectf) \- CTF platform from EasyCTF.
- - [Mellivora](https://github.com/Nakiami/mellivora) \- CTF engine written in PHP.
- - [NightShade](https://github.com/UnrealAkama/NightShade) \- Simple CTF framework.
- - [picoCTF](https://github.com/picoCTF/picoCTF) \- Infrastructure used to run picoCTF.
- - [rCTF](https://github.com/redpwn/rctf) \- CTF platform maintained by the [redpwn](https://github.com/redpwn/rctf) CTF team.
- - [RootTheBox](https://github.com/moloch--/RootTheBox) \- CTF scoring engine for wargames.
- - [ImaginaryCTF](https://github.com/Et3rnos/ImaginaryCTF) \- Platform to host CTFs.
-
-## Forensics
-
-*Tools used to create Forensics challenges*
-
- - [Belkasoft RAM Capturer](https://belkasoft.com/ram-capturer) \- Volatile Memory Acquisition Tool.
- - [Dnscat2](https://github.com/iagox86/dnscat2) \- Hosts communication through DNS.
- - [Magnet AXIOM 2.0](https://www.magnetforensics.com/resources/magnet-axiom-2-0-memory-analysis/) \- Artifact-centric DFIR tool.
- - [Registry Dumper](http://www.kahusecurity.com/posts/registry_dumper_find_and_dump_hidden_registry_keys.html) \- Tool to dump Windows Registry.
-
-## Steganography
-
-*Tools used to create Stego challenges*
-
-Check [solve section for steganography](#steganography-1).
-
-## Web
-
-*Tools used to create Web challenges*
-
- - [Metasploit JavaScript Obfuscator](https://github.com/rapid7/metasploit-framework/wiki/How-to-obfuscate-JavaScript-in-Metasploit) \- How to obfuscate JavaScript in Metasploit.
-
-# 0x01. Solve
-
-## Cryptography
+### Cryptography
 
 *Tools used for solving Crypto challenges*
 
@@ -92,7 +51,7 @@ Check [solve section for steganography](#steganography-1).
  - [Crackstation](https://crackstation.net/) \- Hash cracker (database).
  - [Online Encyclopedia of Integer Sequences](https://oeis.org/) \- OEIS: The On-Line Encyclopedia of Integer Sequences
 
-## Exploiting / Pwn
+### Exploiting / Pwn
 
 *Tools used for solving Pwn challenges*
 
@@ -105,7 +64,7 @@ Check [solve section for steganography](#steganography-1).
  - [Ropper](https://github.com/sashs/Ropper) - Display information about files in different file formats and find gadgets to build rop chains for different architectures.
  - [Shellcodes Database](http://shell-storm.org/shellcode/) - A massive shellcodes database.
 
-## Forensics
+### Forensics
 
 *Tools used for solving Forensics challenges*
 
@@ -134,7 +93,7 @@ Check [solve section for steganography](#steganography-1).
  - [Wireshark](https://www.wireshark.org/) - Tool to analyze pcap or pcapng files.
  - [X-Ways](https://www.x-ways.net/forensics/index-m.html) - Advanced work environment for computer forensic examiners.
 
-## Misc
+### Misc
 
 *Tools used for solving Misc challenges*
 
@@ -169,7 +128,7 @@ Check [solve section for steganography](#steganography-1).
  - [Intezer Analyze](https://analyze.intezer.com/) - Malware analysis platform.
  - [Triage](https://tria.ge/) - State-of-the-art malware analysis sandbox designed for cross-platform support.
 
-## Reversing
+### Reversing
 
 *Tools used for solving Reversing challenges*
 
@@ -208,7 +167,7 @@ A lightweight, online service for when you don’t have the time, resources, or 
  - [WinDBG](http://www.windbg.org/) - Windows debugger distributed by Microsoft.
  - [Z3](https://github.com/Z3Prover/z3) - A theorem prover from Microsoft Research.
 
-## Steganography
+### Steganography
 
 *Tools used for solving Stego challenges*
 
@@ -248,7 +207,7 @@ A lightweight, online service for when you don’t have the time, resources, or 
  - [Zsteg](https://github.com/zed-0xff/zsteg/) - PNG/BMP analysis.
 
 
-## Web 
+### Web 
 
 *Tools used for solving Web challenges*
 
@@ -278,9 +237,52 @@ A lightweight, online service for when you don’t have the time, resources, or 
  - [XSSer](https://xsser.03c8.net/) - Automated XSS testor.
  - [ysoserial](https://github.com/frohoff/ysoserial) - Tool for generating payloads that exploit unsafe Java object deserialization.
 
-# 0x02. Resources
+## Create
 
-## Online Platforms
+*Tools used for creating CTF challenges*
+
+### Platforms
+
+*Frameworks that can be used to host a CTF*
+
+ - [CTFd](https://github.com/CTFd/CTFd) \- Platform to host jeopardy style CTFs.
+ - [FBCTF](https://github.com/facebookarchive/fbctf) \- Facebook CTF platform to host Jeopardy and "King of the Hill" CTF competitions.
+ - [HackTheArch](https://github.com/mcpa-stlouis/hack-the-arch) \- Scoring server for CTF competitions.
+ - [kCTF](https://github.com/google/kctf) \- Kubernetes-based infrastructure for CTF competitions.
+ - [LibreCTF](https://github.com/easyctf/librectf) \- CTF platform from EasyCTF.
+ - [Mellivora](https://github.com/Nakiami/mellivora) \- CTF engine written in PHP.
+ - [NightShade](https://github.com/UnrealAkama/NightShade) \- Simple CTF framework.
+ - [picoCTF](https://github.com/picoCTF/picoCTF) \- Infrastructure used to run picoCTF.
+ - [rCTF](https://github.com/redpwn/rctf) \- CTF platform maintained by the [redpwn](https://github.com/redpwn/rctf) CTF team.
+ - [RootTheBox](https://github.com/moloch--/RootTheBox) \- CTF scoring engine for wargames.
+ - [ImaginaryCTF](https://github.com/Et3rnos/ImaginaryCTF) \- Platform to host CTFs.
+
+### Forensics
+
+*Tools used to create Forensics challenges*
+
+ - [Belkasoft RAM Capturer](https://belkasoft.com/ram-capturer) \- Volatile Memory Acquisition Tool.
+ - [Dnscat2](https://github.com/iagox86/dnscat2) \- Hosts communication through DNS.
+ - [Magnet AXIOM 2.0](https://www.magnetforensics.com/resources/magnet-axiom-2-0-memory-analysis/) \- Artifact-centric DFIR tool.
+ - [Registry Dumper](http://www.kahusecurity.com/posts/registry_dumper_find_and_dump_hidden_registry_keys.html) \- Tool to dump Windows Registry.
+
+### Steganography
+
+*Tools used to create Stego challenges*
+
+Check [solve section for steganography](#steganography-1).
+
+### Web
+
+*Tools used to create Web challenges*
+
+ - [Metasploit JavaScript Obfuscator](https://github.com/rapid7/metasploit-framework/wiki/How-to-obfuscate-JavaScript-in-Metasploit) \- How to obfuscate JavaScript in Metasploit.
+
+
+
+## Resources
+
+### Online Platforms
 
 *Always online CTFs*
 
@@ -332,11 +334,11 @@ A lightweight, online service for when you don’t have the time, resources, or 
  - [GCPGoat](https://github.com/ine-labs/GCPGoat) - A Damn Vulnerable GCP Infrastructure.
  - [Juice Shop](https://github.com/juice-shop/juice-shop-ctf) - Capture-the-Flag (CTF) environment setup tools for OWASP Juice Shop. 
 
-## Collaborative Tools
+### Collaborative Tools
 
  - [CTFNote](https://github.com/TFNS/CTFNote) - Collaborative tool aiming to help CTF teams to organise their work.
 
-## Writeups Repositories
+### Writeups Repositories
 
 *Repository of CTF Writeups*
 
@@ -344,15 +346,20 @@ A lightweight, online service for when you don’t have the time, resources, or 
  - [CTFtime](https://ctftime.org/writeups) - CTFtime Writeups Collection.
  - [Github.com/CTFs](https://github.com/ctfs) - Collection of CTF Writeups.
 
-## Courses
+### Courses
 
  - [Roppers Bootcamp](https://www.roppers.org/courses/ctf) - CTF Bootcamp.
 
-# 0x03. Bibliography
+## Bibliography
 
-*The resources presented here have been gathered from numerous sources. However, the most important are:*
-
- - [apsdehal_awesome-ctf](https://github.com/apsdehal/awesome-ctf)
- - [vavkamil_awesome-bugbounty-tools](https://github.com/vavkamil/awesome-bugbounty-tools)
- - [zardus_ctf-tools](https://github.com/zardus/ctf-tools)
+ - [CTF Cheat Sheet](https://github.com/ctfs/write-ups-2015) - Collection of CTF Writeups.
+ - [CTF Wiki](https://ctf-wiki.github.io/ctf-wiki/) - CTF Wiki.
+ - [Pwnable.kr](http://pwnable.kr/) - Pwn/Exploiting platform.
+ - [Pwnable.tw](https://pwnable.tw/) - Pwn/Exploiting platform.
+ - [Pwnable.xyz](https://pwnable.xyz/) - Pwn/Exploiting platform.
+ - [PWNChallenge](http://pwn.eonew.cn/) - Pwn/Exploiting platform.
+ - [Reversing.kr](http://reversing.kr/) - Reverse Engineering platform.
+ - [Root-me](https://www.root-me.org/) - CTF training platform.
+ - [VibloCTF](https://ctf.viblo.asia/landing) - CTF training platform.
+ - [WeChall](https://www.wechall.net/active_sites) - Challenge sites directory & forum.
 
