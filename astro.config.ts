@@ -39,8 +39,8 @@ export default defineConfig({
     }),
     sitemap(),
     mdx({
-      remarkPlugins: [],
-      rehypePlugins: [],
+      remarkPlugins: [readingTimeRemarkPlugin],
+      rehypePlugins: [responsiveTablesRehypePlugin, lazyImagesRehypePlugin],
       extendMarkdownConfig: true,
       gfm: true,
     }),

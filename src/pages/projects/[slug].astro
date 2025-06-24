@@ -1,0 +1,33 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import SinglePost from '~/components/blog/SinglePost.astro';
+
+export async function getStaticPaths() {
+  const fs = await import('fs');
+  const path = await import('path');
+  const projectsDir = path.resolve('src/data/projects');
+  const files = fs.readdirSync(projectsDir);
+  return files
+    .filter((file) => file.endsWith('.mdx'))
+    .map((file) => ({ params: { slug: file.replace(/\.mdx$/, '') } }));
+}
+
+const { slug } = Astro.params;
+const ProjectMDX = await import(`../../data/projects/${slug}.mdx`);
+const Content = ProjectMDX.default;
+const frontmatter = ProjectMDX.frontmatter ?? {};
+
+// Convert publishDate string to Date object for SinglePost
+if (frontmatter.publishDate && typeof frontmatter.publishDate === 'string') {
+  frontmatter.publishDate = new Date(frontmatter.publishDate);
+}
+
+---
+
+<Layout metadata={frontmatter}>
+  <SinglePost post={frontmatter} url={frontmatter.permalink} showTOC={false}>
+    <div class="prose dark:prose-invert max-w-none">
+      <Content />
+    </div>
+  </SinglePost>
+</Layout>
