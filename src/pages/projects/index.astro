@@ -2,13 +2,41 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Headline from '~/components/blog/Headline.astro';
 import ProjectList from '~/components/projects/ProjectList.astro';
-import { projects } from '~/data/projects';
+
+// Dynamically import all MDX project files and extract their frontmatter
+const projectFiles = import.meta.glob('../../data/projects/*.mdx');
+const imageImports = import.meta.glob('../../assets/images/*');
+let projects = await Promise.all(
+  Object.entries(projectFiles).map(async ([path, resolver]) => {
+    const mod = await resolver();
+    let image = mod.frontmatter.image;
+    // If image path starts with '~/assets', try to import it
+    if (typeof image === 'string' && image.startsWith('~/assets')) {
+      const imagePath = '../../' + image.replace('~/', '');
+      if (imageImports[imagePath]) {
+        image = (await imageImports[imagePath]()).default;
+      }
+    }
+    return {
+      ...mod.frontmatter,
+      image,
+      slug: mod.frontmatter.slug || path.split('/').pop().replace('.mdx', ''),
+    };
+  })
+);
+
+// Sort: projects with 'latest' in status come first
+projects = projects.sort((a, b) => {
+  const aLatest = Array.isArray(a.status) && a.status.includes('latest');
+  const bLatest = Array.isArray(b.status) && b.status.includes('latest');
+  if (aLatest === bLatest) return 0;
+  return aLatest ? -1 : 1;
+});
+
 const metadata = {
   title: 'Projects',
   description: 'View my projects and work',
 };
-
-
 ---
 
 <Layout metadata={metadata}>
