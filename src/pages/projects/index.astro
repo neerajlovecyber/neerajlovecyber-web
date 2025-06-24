@@ -2,21 +2,14 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Headline from '~/components/blog/Headline.astro';
 import ProjectList from '~/components/projects/ProjectList.astro';
+import { findImageWithFallback } from '~/utils/images';
 
 // Dynamically import all MDX project files and extract their frontmatter
-const projectFiles = import.meta.glob('../../data/projects/*.mdx');
-const imageImports = import.meta.glob('../../assets/images/*');
+const projectFiles = import.meta.glob('./../../data/projects/*.mdx');
 let projects = await Promise.all(
   Object.entries(projectFiles).map(async ([path, resolver]) => {
     const mod = await resolver();
-    let image = mod.frontmatter.image;
-    // If image path starts with '~/assets', try to import it
-    if (typeof image === 'string' && image.startsWith('~/assets')) {
-      const imagePath = '../../' + image.replace('~/', '');
-      if (imageImports[imagePath]) {
-        image = (await imageImports[imagePath]()).default;
-      }
-    }
+    let image = await findImageWithFallback(mod.frontmatter.image);
     return {
       ...mod.frontmatter,
       image,
