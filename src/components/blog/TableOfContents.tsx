@@ -24,12 +24,12 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headings = [], title 
         <h4 className="text-base font-bold sm:mt-4">{title}</h4>
         <button
           id="toc-toggle"
-          className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 flex items-center justify-center"
+          className="text-gray-800 hover:text-white dark:text-white dark:hover:text-white flex items-center justify-center"
           aria-label="Toggle table of contents"
           tabIndex={-1}
           type="button"
         >
-          <span className={`w-5 h-5 transition-transform ${isExpanded ? '' : 'rotate-180'}`}>▼</span>
+          <span className="w-5 h-5 text-lg select-none">{isExpanded ? '▲' : '▼'}</span>
         </button>
       </div>
       <div id="toc-content" className={isExpanded ? '' : 'hidden'}>
@@ -43,7 +43,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headings = [], title 
                   <li className="toc-item" key={heading.slug}>
                     <a
                       href={`#${heading.slug}`}
-                      className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white flex no-underline text-sm"
+                      className="flex no-underline text-sm"
                     >
                       <span className="mr-2">{h2Counter}.</span>
                       <span>{heading.text}</span>
@@ -56,7 +56,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headings = [], title 
                   <li className="toc-item ml-4" key={heading.slug}>
                     <a
                       href={`#${heading.slug}`}
-                      className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white text-xs flex no-underline"
+                      className="text-xs flex no-underline"
                     >
                       <span className="mr-2">{h2Counter}.{h3Counter}</span>
                       <span>{heading.text}</span>
@@ -73,29 +73,36 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headings = [], title 
       </div>
       <style>{`
         .toc-container a {
-          color: inherit !important;
+          color: #1a1a1a !important; /* High contrast for light mode */
           text-decoration: none !important;
+          transition: color 0.15s;
         }
         .toc-container a:hover {
-          color: inherit !important;
+          color: #fff !important; /* Strong blue for hover in light mode */
         }
         .toc-item a {
-          color: #374151 !important;
+          color: #fff !important;
         }
         .toc-item a:hover {
-          color: #111827 !important;
+          color: #fff !important;
+        }
+        :global(.dark) .toc-container a {
+          color: #fff !important; /* Pure white for all headings in dark mode */
+        }
+        :global(.dark) .toc-container a:hover {
+          color: #fff !important; /* Blue-400 for hover in dark mode */
         }
         :global(.dark) .toc-item a {
-          color: #D1D5DB !important;
+          color: #fff !important;
         }
         :global(.dark) .toc-item a:hover {
-          color: #FFFFFF !important;
+          color: #fff !important;
         }
         .toc-item.ml-4 a {
-          color: #4B5563 !important;
+          color: #fff !important;
         }
         :global(.dark) .toc-item.ml-4 a {
-          color: #9CA3AF !important;
+          color: #fff !important; /* Pure white for sub-items in dark mode */
         }
       `}</style>
     </div>
