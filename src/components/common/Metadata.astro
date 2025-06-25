@@ -31,7 +31,7 @@ const seoProps: AstroSeoProps = merge(
     canonical: canonical,
     noindex: true,
     nofollow: true,
-    description: undefined,
+    description: METADATA?.description,
     openGraph: {
       url: canonical,
       site_name: SITE?.name,
