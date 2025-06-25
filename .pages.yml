@@ -1,5 +1,5 @@
 media:
-  input: public/assets/images
+  input: assets/images
   output: /assets/images
 content:
   - name: blog
