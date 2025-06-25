@@ -1,0 +1,43 @@
+media:
+  input: public/assets/images
+  output: /assets/images
+content:
+  - name: blog
+    label: Blog Posts
+    type: collection
+    path: src/data/post
+    filename: '{year}-{month}-{day}-{slug}.md'
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: excerpt
+        label: Excerpt
+        type: string
+      - name: publishDate
+        label: Publish Date
+        type: datetime
+        required: true
+      - name: image
+        label: Image
+        type: image
+      - name: tags
+        label: Tags
+        type: array
+        items:
+          type: string
+      - name: category
+        label: Category
+        type: string
+      - name: metadata
+        label: Metadata
+        type: object
+        fields:
+          - name: canonical
+            label: Canonical URL
+            type: string
+      - name: body
+        label: Body
+        type: markdown
+        required: true
