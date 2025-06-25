@@ -37,4 +37,8 @@ content:
           - name: canonical
             label: Canonical URL
             type: string
+      - name: body
+        label: Body
+        type: rich-text
+        required: true
    
