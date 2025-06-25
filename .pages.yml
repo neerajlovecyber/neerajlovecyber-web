@@ -20,7 +20,7 @@ content:
         type: date
         options:
           time: true
-          format: dd-MM-yyyy HH:mm
+          format: dd-MM-yyyyHH:mm
         required: true
         
       - name: image
