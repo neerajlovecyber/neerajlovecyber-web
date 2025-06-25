@@ -16,7 +16,7 @@ content:
         label: Excerpt
         type: string
       - name: publishDate
-        label: Publish Date
+        label: Publish Dater
         type: date
         required: true
         
@@ -24,8 +24,11 @@ content:
         label: Image
         type: image
       - name: tags
-        label: Tags
-        type: text
+        type: select
+        options:
+          creatable: true
+          multiple: true
+          values: [ pentesting,linux,privilege escalation,security,cheatsheet ]
       
       - name: category
         label: Category
