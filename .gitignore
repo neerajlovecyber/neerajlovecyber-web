@@ -23,3 +23,6 @@ pnpm-lock.yaml
 
 .astro
 astro-app
+
+node_modules
+.env
