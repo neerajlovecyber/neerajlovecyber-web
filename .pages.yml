@@ -17,16 +17,16 @@ content:
         type: string
       - name: publishDate
         label: Publish Date
-        type: datetime
+        type: date
         required: true
+        
       - name: image
         label: Image
         type: image
       - name: tags
         label: Tags
-        type: array
-        items:
-          type: string
+        type: text
+      
       - name: category
         label: Category
         type: string
@@ -37,7 +37,4 @@ content:
           - name: canonical
             label: Canonical URL
             type: string
-      - name: body
-        label: Body
-        type: markdown
-        required: true
+   
