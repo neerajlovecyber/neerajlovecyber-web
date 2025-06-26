@@ -9,7 +9,10 @@ export const formatter: Intl.DateTimeFormat = new Intl.DateTimeFormat(I18N?.lang
   hourCycle: 'h23',
 });
 
-export const getFormattedDate = (date: Date): string => (date ? formatter.format(date) : '');
+export const getFormattedDate = (date: Date): string => {
+  const d = new Date(date);
+  return d instanceof Date && !isNaN(d.getTime()) ? formatter.format(d) : '';
+};
 
 export const trim = (str = '', ch?: string) => {
   let start = 0,
