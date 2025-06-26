@@ -2,9 +2,11 @@ import { I18N } from 'astrowind:config';
 
 export const formatter: Intl.DateTimeFormat = new Intl.DateTimeFormat(I18N?.language, {
   year: 'numeric',
-  month: 'short',
-  day: 'numeric',
-  timeZone: 'UTC',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  hourCycle: 'h23',
 });
 
 export const getFormattedDate = (date: Date): string => (date ? formatter.format(date) : '');

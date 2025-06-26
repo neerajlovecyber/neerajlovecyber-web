@@ -1,5 +1,5 @@
 ---
-publishDate: 2025-06-1T00:00:00Z
+publishDate: 01-06-2025 01:00
 title: 'Volatility Memory Forensics Cheatsheet: Essential Commands for Digital Investigators'
 excerpt: A comprehensive guide to memory forensics using Volatility, covering essential commands, plugins, and techniques for extracting valuable evidence from memory dumps.
 image: src/assets/images/posts/volatility-memory-forensics-cheatsheet.png

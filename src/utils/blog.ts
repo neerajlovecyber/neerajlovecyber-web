@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { Post } from '~/types';
 import { APP_BLOG } from 'astrowind:config';
+import dayjs from 'dayjs';
 import { cleanSlug, trimSlash, BLOG_BASE, POST_PERMALINK_PATTERN, CATEGORY_BASE, TAG_BASE } from './permalinks';
 
 const generatePermalink = async ({
@@ -58,7 +59,10 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
   } = data;
 
   const slug = cleanSlug(id);
-  const publishDate = new Date(rawPublishDate);
+  // Parse publishDate using dayjs to handle 'dd-MM-yyyy HH:mm' format
+  const publishDate = dayjs(rawPublishDate, 'DD-MM-YYYY HH:mm', true).isValid() 
+    ? dayjs(rawPublishDate, 'DD-MM-YYYY HH:mm').toDate()
+    : new Date(rawPublishDate);
   const updateDate = rawUpdateDate ? new Date(rawUpdateDate) : undefined;
 
   const category = rawCategory

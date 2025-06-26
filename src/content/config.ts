@@ -1,5 +1,6 @@
 import { z, defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
+import dayjs from 'dayjs';
 
 const metadataDefinition = () =>
   z
@@ -49,8 +50,8 @@ const metadataDefinition = () =>
 const postCollection = defineCollection({
   loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/post' }),
   schema: z.object({
-    publishDate: z.date().optional(),
-    updateDate: z.date().optional(),
+    publishDate: z.preprocess((val) => (typeof val === 'string' ? dayjs(val, 'DD-MM-YYYY HH:mm').toDate() : val), z.date().optional()),
+    updateDate: z.preprocess((val) => (typeof val === 'string' ? dayjs(val, 'DD-MM-YYYY HH:mm').toDate() : val), z.date().optional()),
     draft: z.boolean().optional(),
 
     title: z.string(),
