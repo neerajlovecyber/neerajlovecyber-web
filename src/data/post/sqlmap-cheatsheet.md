@@ -1,5 +1,5 @@
 ---
-publishDate: 29-04-2025 00:00
+publishDate: 2025-06-23 00:00
 title: SQLMap Cheatsheet Automated SQL Injection Testing and Interview Questions
 excerpt: A practical guide to using sqlmap for SQL Injection testing, including command examples, explanations, and common interview questions.
 image: src/assets/images/posts/sqlmap-cheatsheet.png
@@ -10,7 +10,6 @@ tags:
   - Penetration Testing
 metadata:
   canonical: https://neerajlovecyber.com/sqlmap-cheatsheet
----
 ---
 
 # SQLMap Cheatsheet: Automated SQL Injection Testing and Interview Questions
