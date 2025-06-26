@@ -13,7 +13,7 @@ content:
         type: string
         required: true
       - name: slug
-        label: Title
+        label: slug
         type: string
         required: true
       - name: draft
