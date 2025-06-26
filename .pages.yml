@@ -12,6 +12,10 @@ content:
         label: Title
         type: string
         required: true
+      - name: draft
+        label: draft
+        type: boolean
+        default: true
       - name: excerpt
         label: Excerpt
         type: string
