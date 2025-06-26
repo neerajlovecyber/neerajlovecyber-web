@@ -6,7 +6,7 @@ content:
     label: Blog Posts
     type: collection
     path: src/data/post
-    filename: '{slug}.md'
+    filename: '{primary}.md'
     fields:
       - name: title
         label: Title
@@ -29,8 +29,7 @@ content:
         options:
           time: true
           format: yyyy-MM-dd HH:mm 
-        required: true
-        
+        required: true   
       - name: image
         label: Image
         type: image
@@ -40,7 +39,6 @@ content:
           creatable: true
           multiple: true
           values: [ pentesting,linux,privilege escalation,security,cheatsheet ]
-      
       - name: category
         label: Category
         type: string
