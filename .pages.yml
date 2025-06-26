@@ -8,10 +8,6 @@ content:
     path: src/data/post
     filename: '{primary}.md'
     fields:
-      - name: slug
-        label: slug
-        type: string
-        required: true
       - name: title
         label: Title
         type: string
