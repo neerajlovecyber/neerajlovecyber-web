@@ -50,8 +50,21 @@ const metadataDefinition = () =>
 const postCollection = defineCollection({
   loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/post' }),
   schema: z.object({
-    publishDate: z.preprocess((val) => (typeof val === 'string' ? dayjs(val, 'DD-MM-YYYY HH:mm').toDate() : val), z.date().optional()),
-    updateDate: z.preprocess((val) => (typeof val === 'string' ? dayjs(val, 'DD-MM-YYYY HH:mm').toDate() : val), z.date().optional()),
+    publishDate: z.preprocess((val) => {
+      if (typeof val === 'string') {
+        const date = dayjs(val, 'DD-MM-YYYY HH:mm', true);
+        return date.isValid() ? date.toDate() : undefined;
+      }
+      return val;
+    }, z.date().optional()),
+    updateDate: z.preprocess((val) => {
+      if (typeof val === 'string') {
+        const date = dayjs(val, 'DD-MM-YYYY HH:mm', true);
+        return date.isValid() ? date.toDate() : undefined;
+      }
+      return val;
+    }, z.date().optional()),
+    status: z.union([z.literal('draft'), z.literal('published')]).default('published'),
     draft: z.boolean().optional(),
 
     title: z.string(),
