@@ -1,5 +1,6 @@
 ---
-title: A quick guide to CTF (Capture The Flag) - CTF Cheatsheet - Checklist - Guide
+title: "A quick Beginners guide to CTF (Capture The Flag) - CTF Cheatsheet -
+  Checklist "
 draft: false
 excerpt: A practical cheatsheet, checklist, and guide for CTF (Capture The Flag)
   competitions, covering essential techniques, tools, and tips for all major
@@ -584,7 +585,6 @@ Check [solve section for steganography](#steganography-1).
 _Tools used to create Web challenges_
 
 *   [Metasploit JavaScript Obfuscator](https://github.com/rapid7/metasploit-framework/wiki/How-to-obfuscate-JavaScript-in-Metasploit) - How to obfuscate JavaScript in Metasploit.
-    
 
 ## Resources
 
@@ -698,7 +698,6 @@ _Repository of CTF Writeups_
 ### Courses
 
 *   [Roppers Bootcamp](https://www.roppers.org/courses/ctf) - CTF Bootcamp.
-    
 
 * * *
 
