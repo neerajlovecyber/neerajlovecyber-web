@@ -2,7 +2,7 @@
 publishDate: 2025-06-1T00:00:00Z
 title: 'Linux Privilege Escalation Cheatsheet: Techniques and Tools for Ethical Hackers'
 excerpt: A practical guide to Linux privilege escalation techniques using kernel exploits, misconfigurations, and automated tools like LinPEAS and LinEnum.
-image: ~/assets/images/posts/linux-privilege-escalation-cheatsheet.png
+image: src/assets/images/posts/linux-privilege-escalation-cheatsheet.png
 tags:
   - pentesting
   - linux
