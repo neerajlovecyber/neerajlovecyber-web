@@ -15,7 +15,7 @@ content:
       - name: draft
         label: draft
         type: boolean
-        default: true
+        default: false
       - name: excerpt
         label: Excerpt
         type: string
