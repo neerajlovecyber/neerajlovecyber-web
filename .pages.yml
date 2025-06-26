@@ -1,6 +1,6 @@
 media:
   input: src/assets/images/posts
-  output: /assets/images/posts
+  output: src/assets/images/posts
 content:
   - name: blog
     label: Blog Posts
@@ -20,7 +20,7 @@ content:
         type: date
         options:
           time: true
-          format: dd-MM-yyyyHH:mm
+          format: yyyy-MM-ddTHH:mm:ssZ 
         required: true
         
       - name: image
