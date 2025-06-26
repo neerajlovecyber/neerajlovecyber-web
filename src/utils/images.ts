@@ -36,9 +36,14 @@ export const findImage = async (
     return imagePath;
   }
 
-  // Relative paths or not "~/assets/"
-  if (!imagePath.startsWith('~/assets/images')) {
+  // Relative paths or not "~/assets/" or "src/assets/"
+  if (!imagePath.startsWith('~/assets/images') && !imagePath.startsWith('src/assets/images')) {
     return imagePath;
+  }
+
+  // Convert src/assets/images to ~/assets/images for consistent handling
+  if (imagePath.startsWith('src/assets/images')) {
+    imagePath = imagePath.replace('src/assets/images', '~/assets/images');
   }
 
   const images = await fetchLocalImages();
