@@ -330,7 +330,7 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     
     ![](src/assets/images/posts/ctf-cheatsheet/Futurama%20Cipher.png)
     
-    *   [Decoder - https://www.dcode.fr/futurama-alien-alphabet](https://www.dcode.fr/futurama-alien-alphabet)
+    *   Decoder - [https://www.dcode.fr/futurama-alien-alphabet](https://www.dcode.fr/futurama-alien-alphabet)
         
 *   **🗡 Hylian Cipher (Twilight Princess)**  
     A symbolic script from _The Legend of Zelda: Twilight Princess_. Mostly decorative but can be decoded to reveal messages.
