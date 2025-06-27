@@ -53,7 +53,7 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
 
 ### Cryptography
 
-### 🔐 Common CTF Cipher Formats & Encodings checklist (CTF cryptography Cheatsheet)
+**🔐 Common CTF Cipher Formats & Encodings checklist (CTF cryptography Cheatsheet)**
 
 #### 📦 **Base Encodings**
 
@@ -164,7 +164,7 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
 *   **Example**:`BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABAABAAAA`
     
 
-_Tools used for solving Crypto challenges_
+**_Tools used for solving Crypto challenges_**
 
 *   [Base65536](https://github.com/qntm/base65536) - Unicode's answer to Base64.
     
