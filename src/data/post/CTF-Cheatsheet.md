@@ -118,7 +118,6 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
 
 *   **Morse Code**
     
-
 *   Dots and dashes (or "dit-dah")
     
 
@@ -128,7 +127,6 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
 
 *   **Tap Code**
     
-
 *   Similar to Polybius, based on tapping patterns
     
 *   **Example**:
@@ -144,7 +142,6 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
 
 *   **DNA Encoding**
     
-
 *   Uses A, T, G, C base characters
     
 
@@ -170,7 +167,6 @@ GAGTTGAAAATATTGCGGCCGCTGGTAATGATAACATTGCGGCATTTG CTACACCGAGGCGTCGGA
         
 *   **Bacon Cipher**
     
-
 *   Binary-style A/B pattern representing letters
     
 
@@ -178,11 +174,11 @@ GAGTTGAAAATATTGCGGCCGCTGGTAATGATAACATTGCGGCATTTG CTACACCGAGGCGTCGGA
 BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABAABAAAA
 ```
 
-*   🧠 **Esoteric Languages**
-    
-    * * *
-    
-    #### 🧬 **Brainfuck**
+* * *
+
+🧠 **Esoteric Languages**
+
+*   🧬 **Brainfuck**
     
     *   Uses a minimal set of characters like `+`, `-`, `>`, `<`, `[`, `]`, `.`, `,`
         
@@ -191,11 +187,9 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     *   **Example**:
         
     
-    ```
-    ++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>>++++++++++++. ------------.+.++++++++++.----------.++++++++++. -----------------.++++++++++++++++.-----------------. ++++++++.+++++.--------.+++++++++++++++. ------------------.++++++++.
-    ```
+    ++++++++++\[>+>+++>+++++++>++++++++++<<<<-\]>>>>++++++++++++. ------------.+.++++++++++.----------.++++++++++. -----------------.++++++++++++++++.-----------------. ++++++++.+++++.--------.+++++++++++++++. ------------------.++++++++.
     
-    #### 🧠 **JSFuck**
+*   🧠 **JSFuck**
     
     *   JavaScript written using only 6 characters: `[]()!+`
         
@@ -204,11 +198,9 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     *   **Example**:
         
     
-    ```
-    [][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])...
-    ```
+    \[\]\[(!\[\]+\[\])\[+\[\]\]+(\[!\[\]\]+\[\]\[\[\]\])\[+!+\[\]+\[+\[\]\]\]+(!\[\]+\[\])...
     
-    #### 🧠 **Malbolge**
+*   🧠 **Malbolge**
     
     *   Infamously hard to write and understand
         
@@ -217,11 +209,9 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     *   **Example**:
         
     
-    ```
-    ('&%:9]!~}|z2Vxwv-,POqponl$Hjig%eB@@>}=<M:9wv6WsU2T|...
-    ```
+    ('&%:9\]!~}|z2Vxwv-,POqponl$Hjig%eB@@>}=<M:9wv6WsU2T|...
     
-    #### 🧠 **Whitespace**
+*   🧠 **Whitespace**
     
     *   Code is written using only spaces, tabs, and newlines
         
@@ -233,15 +223,14 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
             
         *   `0x0A` (Line Feed)
             
-    
-    #### 🧠 **PikaLang**
-    
-    *   Uses Pokémon-like sounds such as `pi`, `pika`, `ka`, `pipi`
+    *   🧠 **PikaLang**
         
-    *   Typically encodes data using custom encoding logic
-        
-    *   May even implement RSA in challenges
-        
+        *   Uses Pokémon-like sounds such as `pi`, `pika`, `ka`, `pipi`
+            
+        *   Typically encodes data using custom encoding logic
+            
+        *   May even implement RSA in challenges
+            
     
     * * *
     
