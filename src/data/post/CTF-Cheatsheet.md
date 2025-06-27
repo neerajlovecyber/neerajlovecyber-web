@@ -367,9 +367,9 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     
     ![](src/assets/images/posts/ctf-cheatsheet/Gravity%20Fall.webp)
     
-    #### 💃 Dancing Men Cipher
+*   💃 Dancing Men Cipher
     
-*   Inspired by Sherlock Holmes, this cipher uses stick figures in various poses to represent letters. It’s a monoalphabetic substitution cipher from the story _The Adventure of the Dancing Men_.
+    Inspired by Sherlock Holmes, this cipher uses stick figures in various poses to represent letters. It’s a monoalphabetic substitution cipher from the story _The Adventure of the Dancing Men_.
     
     ![](src/assets/images/posts/ctf-cheatsheet/Dancing%20Men%20Cipher.png)
     
