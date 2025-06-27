@@ -7,9 +7,9 @@ excerpt: A complete Steganography 101 CTF Cheatsheet covering essential tools,
 publishDate: 2025-06-27 22:58
 tags:
   - cheatsheet
-  - "Steganography "
+  - Steganography
   - CTFs
-category: "Steganography "
+category: Steganography
 metadata:
   canonical: https://neerajlovecyber.com/steganography-cheatsheet-for-ctf-beginners
 ---
@@ -49,7 +49,7 @@ For direct metadata manipulation or cleanup.
 
 ## 🧩 Embedded File Discovery
 
-### 🔍 Binwalk – File Carving Tool
+### 🔍 [Binwalk](https://github.com/ReFirmLabs/binwalk) – File Carving Tool
 
 `binwalk -Me target.jpg`
 
@@ -78,9 +78,9 @@ Use `dd` if you manually need to extract embedded segments.
 
 1.  Open image and observe — flag may be painted in.
     
-2.  Use **GIMP**: adjust brightness, contrast, curves, color levels.
+2.  Use **[GIMP](https://www.gimp.org/)**: adjust brightness, contrast, curves, color levels.
     
-3.  Use **ImageMagick** to compare images:
+3.  Use **[ImageMagick](http://www.imagemagick.org/script/index.php)** to compare images:
     
 
 ```
@@ -93,13 +93,13 @@ compare original.png modified.png diff.png
 
 | Tool | Usage |
 | --- | --- |
-| `stegsolve` | Bit-plane viewer (bit-level hidden info) |
-| `zsteg` | Bit analysis of PNG/BMP |
-| `stegonline` | Web-based image steg operations |
-| `Steganabara` | LSB amplifier & visualizer |
-| `sigBits` | Significant bits stego decoder |
-| `pngcheck` | Dump/analyze PNG chunks |
-| `pngtools` | Deep chunk-level PNG analysis |
+| [`stegsolve`](https://github.com/zardus/ctf-tools/tree/master/stegsolve) | Bit-plane viewer (bit-level hidden info) |
+| [`zsteg`](https://github.com/zed-0xff/zsteg/) | Bit analysis of PNG/BMP |
+| [`stegonline`](https://stegonline.georgeom.net/) | Web-based image steg operations |
+| [`Steganabara`](https://github.com/Denbergvanthijs/Steganabara) | LSB amplifier & visualizer |
+| [`sigBits`](https://github.com/Pulho/sigBits) | Significant bits stego decoder |
+| [`pngcheck`](http://www.libpng.org/pub/png/apps/pngcheck.html) | Dump/analyze PNG chunks |
+| [`pngtools`](https://packages.debian.org/sid/pngtools) | Deep chunk-level PNG analysis |
 
 Use stegsolve to identify QR codes, LSB data, or color-filtered patterns.
 
@@ -109,15 +109,15 @@ Use stegsolve to identify QR codes, LSB data, or color-filtered patterns.
 
 | Tool | Usage |
 | --- | --- |
-| `steghide` | Hide/extract in JPG, BMP, WAV |
-| `stegseek` | Fast brute-force for `steghide` |
-| `stegcracker` | Brute-force JPG stego files |
-| `outguess` | Stego in JPG/PPM files |
-| `stegextract` | Auto-detect hidden data |
-| `jsteg` | LSB-based JPEG stego |
-| `stegpy` | Simple Python LSB tool |
-| `stegosaurus` | Embed data into Python bytecode |
-| `Snow/stegsnow` | Whitespace stego tool |
+| [`steghide`](http://steghide.sourceforge.net/) | Hide/extract in JPG, BMP, WAV |
+| [`stegseek`](https://github.com/RickdeJager/stegseek) | Fast brute-force for `steghide` |
+| [`stegcracker`](https://github.com/Paradoxis/StegCracker) | Brute-force JPG stego files |
+| [`outguess`](https://www.freebsd.org/cgi/man.cgi?query=outguess+&apropos=0&sektion=0&manpath=FreeBSD+Ports+5.1-RELEASE&format=html) | Stego in JPG/PPM files |
+| [`stegextract`](https://github.com/evyatarmeged/stegextract) | Auto-detect hidden data |
+| [`jsteg`](https://github.com/lukechampine/jsteg) | LSB-based JPEG stego |
+| [`stegpy`](https://github.com/dhsdshdhk/stegpy) | Simple Python LSB tool |
+| [`stegosaurus`](https://github.com/AngelKitty/stegosaurus) | Embed data into Python bytecode |
+| [`Snow/stegsnow`](https://darkside.com.au/snow/) | Whitespace stego tool |
 
 Example:
 
@@ -129,7 +129,7 @@ steghide extract -sf secret.jpg stegseek secret.jpg rockyou.txt
 
 ### 🖼 Online Tools
 
-*   [**StegOnline**](https://georgeom.net/StegOnline)
+*   [**StegOnline**](https://stegonline.georgeom.net/)
     
 *   [**Steganography Online**](https://stylesuxx.github.io/steganography/)
     
@@ -139,7 +139,7 @@ steghide extract -sf secret.jpg stegseek secret.jpg rockyou.txt
     
 *   [**AperiSolve**](https://aperisolve.fr) – Multi-layer analyzer
     
-*   **Image ELA** – Error level analysis (detects manipulations)
+*   [**Image ELA**](https://29a.ch/sandbox/2012/imageerrorlevelanalysis/) – Error level analysis (detects manipulations)
     
 
 * * *
@@ -150,13 +150,13 @@ steghide extract -sf secret.jpg stegseek secret.jpg rockyou.txt
 
 | Tool | Purpose |
 | --- | --- |
-| `DeepSound` | Hide/extract files in `.wav` audio |
-| `sonic-visualiser` | Visualize spectrograms, waveforms |
-| `audacity` | Waveform editing, reversal, decoding |
-| `DTMF Detection` | Decodes dial tones from audio |
-| `Snow` / `stegsnow` | Whitespace stego in audio |
+| [`DeepSound`](https://github.com/Jpinsoft/DeepSound) | Hide/extract files in `.wav` audio |
+| [`sonic-visualiser`](https://www.sonicvisualiser.org/) | Visualize spectrograms, waveforms |
+| [`audacity`](https://www.audacityteam.org/) | Waveform editing, reversal, decoding |
+| [`DTMF Detection`](https://unframework.github.io/dtmf-detect/) | Decodes dial tones from audio |
+| [`Snow` / `stegsnow`](https://darkside.com.au/snow/) | Whitespace stego in audio |
 
-Use **sonic-visualiser** with linear/log scale spectrogram + contrast filters.
+Use **[sonic-visualiser](https://www.sonicvisualiser.org/)** with linear/log scale spectrogram + contrast filters.
 
 * * *
 
@@ -168,13 +168,13 @@ Use **sonic-visualiser** with linear/log scale spectrogram + contrast filters.
 ffmpeg -i video.mp4 frame_%04d.png
 ```
 
-*   Analyze individual frames using `zsteg`, `stegsolve`.
+*   Analyze individual frames using [`zsteg`](https://github.com/zed-0xff/zsteg/), [`stegsolve`](https://github.com/zardus/ctf-tools/tree/master/stegsolve).
     
-*   Open audio separately in **Audacity** for reverse/LSB tricks.
+*   Open audio separately in **[Audacity](https://www.audacityteam.org/)** for reverse/LSB tricks.
     
 
 Tool:  
-**hipshot** — Convert video/photo series into long-exposure-style images to reveal stego data.
+[**hipshot**](https://bitbucket.org/eliteraspberries/hipshot/src/master/) — Convert video/photo series into long-exposure-style images to reveal stego data.
 
 * * *
 
@@ -218,7 +218,7 @@ from PIL import Image img = Image.open('input.png') pixels = [(255-r, 255-g, 255
 
 *   [**TinEye**](https://www.tineye.com): Reverse search
     
-*   Use **ImageMagick** or **diff-pixel tools** for overlays
+*   Use **[ImageMagick](http://www.imagemagick.org/script/index.php)** or **diff-pixel tools** for overlays
     
 *   Compare layers in Adobe/GIMP if image has metadata for layer stacking
     
@@ -229,30 +229,38 @@ from PIL import Image img = Image.open('input.png') pixels = [(255-r, 255-g, 255
 
 | Tool | Category | Function |
 | --- | --- | --- |
-| `AperiSolve` | Online | Layer inspection |
-| `FotoForensics` | Online | ELA and manipulation detection |
-| `BPStegano` | CLI | LSB encoding (Python3) |
-| `Stegsolve` | GUI (Java) | Bit-layer viewer |
-| `Zsteg` | CLI | PNG/BMP LSB decoding |
-| `Steghide` | CLI | Stego in image/audio |
-| `Stegseek` | CLI | Brute-force `steghide` |
-| `Outguess` | CLI | JPG/PPM stego |
-| `Snow` / `Stegsnow` | CLI | Whitespace stego |
-| `jsteg` | CLI | JPEG LSB |
-| `sigBits` | CLI | LSB decoder |
-| `stegcracker` | CLI | JPG bruteforce stego |
-| `stegextract` | CLI | Auto extract data |
-| `ImageMagick` | CLI | Compare, convert, XOR |
-| `pngcheck` | CLI | PNG chunk inspection |
-| `pngtools` | CLI | Advanced PNG analysis |
-| `StegOnline` | Web | Encode/Decode images |
-| `Image Steganography` | Web | JS-based LSB tool |
-| `OpenStego` | GUI | Random LSB |
-| `DeepSound` | GUI | Audio file steganography |
-| `hipshot` | CLI | Video → long exposure frame |
-| `sonic-visualiser` | GUI | Audio spectrum viewer |
-| `DTMF Tools` | Audio | Decode dial tones |
-| `pdf2john` | CLI | Crack PDF password |
-| `Stegosaurus` | Python | Embed in bytecode |
-| `StegoVeritas` | Python | Multi-stego toolkit |
-| `Stegpy` | Python | Basic LSB tool |
+| [`AperiSolve`](https://aperisolve.fr/) | Online | Layer inspection |
+| [`FotoForensics`](https://fotoforensics.com/) | Online | ELA and manipulation detection |
+| [`BPStegano`](https://github.com/TapanSoni/BPStegano) | CLI | LSB encoding (Python3) |
+| [`Stegsolve`](https://github.com/zardus/ctf-tools/tree/master/stegsolve) | GUI (Java) | Bit-layer viewer |
+| [`Zsteg`](https://github.com/zed-0xff/zsteg/) | CLI | PNG/BMP LSB decoding |
+| [`Steghide`](http://steghide.sourceforge.net/) | CLI | Stego in image/audio |
+| [`Stegseek`](https://github.com/RickdeJager/stegseek) | CLI | Brute-force `steghide` |
+| [`Outguess`](https://www.freebsd.org/cgi/man.cgi?query=outguess+&apropos=0&sektion=0&manpath=FreeBSD+Ports+5.1-RELEASE&format=html) | CLI | JPG/PPM stego |
+| [`Snow` / `Stegsnow`](https://darkside.com.au/snow/) | CLI | Whitespace stego |
+| [`jsteg`](https://github.com/lukechampine/jsteg) | CLI | JPEG LSB |
+| [`sigBits`](https://github.com/Pulho/sigBits) | CLI | LSB decoder |
+| [`stegcracker`](https://github.com/Paradoxis/StegCracker) | CLI | JPG bruteforce stego |
+| [`stegextract`](https://github.com/evyatarmeged/stegextract) | CLI | Auto extract data |
+| [`ImageMagick`](http://www.imagemagick.org/script/index.php) | CLI | Compare, convert, XOR |
+| [`pngcheck`](http://www.libpng.org/pub/png/apps/pngcheck.html) | CLI | PNG chunk inspection |
+| [`pngtools`](https://packages.debian.org/sid/pngtools) | CLI | Advanced PNG analysis |
+| [`StegOnline`](https://stegonline.georgeom.net/) | Web | Encode/Decode images |
+| [`Image Steganography`](https://incoherency.co.uk/image-steganography/) | Web | JS-based LSB tool |
+| [`OpenStego`](https://www.openstego.com/) | GUI | Random LSB |
+| [`DeepSound`](https://github.com/Jpinsoft/DeepSound) | GUI | Audio file steganography |
+| [`hipshot`](https://bitbucket.org/eliteraspberries/hipshot/src/master/) | CLI | Video → long exposure frame |
+| [`sonic-visualiser`](https://www.sonicvisualiser.org/) | GUI | Audio spectrum viewer |
+| [`DTMF Tools`](https://unframework.github.io/dtmf-detect/) | Audio | Decode dial tones |
+| [`pdf2john`](https://github.com/openwall/john) | CLI | Crack PDF password |
+| [`Stegosaurus`](https://github.com/AngelKitty/stegosaurus) | Python | Embed in bytecode |
+| [`StegoVeritas`](https://github.com/bannsec/stegoVeritas) | Python | Multi-stego toolkit |
+| [`Stegpy`](https://github.com/dhsdshdhk/stegpy) | Python | Basic LSB tool |
+| [`BPStegano`](https://github.com/TapanSoni/BPStegano) | Python | LSB encoding (Python3) |
+| [`Steganabara`](https://github.com/Denbergvanthijs/Steganabara) | GUI | LSB amplifier & visualizer |
+| [`Magic Eye Solver`](http://magiceye.ecksdee.co.uk/) | Web | Hidden info from images |
+| [`SmartDeblur`](https://github.com/Y-Vladimir/SmartDeblur) | GUI | Deblur images |
+| [`Exiv2`](https://www.exiv2.org/manpage.html) | CLI | Image metadata manipulation |
+| [`Exif`](http://manpages.ubuntu.com/manpages/trusty/man1/exif.1.html) | CLI | Show EXIF info |
+| [`Stegbreak`](https://linux.die.net/man/1/stegbreak) | CLI | Brute-force JPG stego |
+| [`Binwalk`](https://github.com/ReFirmLabs/binwalk) | CLI | Embedded file extraction |
