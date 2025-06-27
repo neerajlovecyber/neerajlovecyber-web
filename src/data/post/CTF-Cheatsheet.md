@@ -53,6 +53,117 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
 
 ### Cryptography
 
+### 🔐 Common CTF Cipher Formats & Encodings checklist (CTF cryptography Cheatsheet)
+
+#### 📦 **Base Encodings**
+
+*   **Base64**
+    
+    *   **Pattern**: Alphanumeric with `+` and `/`, may end with `=`
+        
+    *   **Example**: `dGhpc2lzYmFzZTY0Y2lwaGVyCg==`
+        
+*   **Base32**
+    
+    *   **Pattern**: UPPERCASE alphanumeric, may end with `=`
+        
+    *   **Example**: `ORUGS43JONRGC43FGMZGG2LQNBSXE===`
+        
+*   **Base85**
+    
+    *   **Pattern**: Gibberish-like, uses extended ASCII characters
+        
+    *   **Example**: `<+oueBld\`lF(I<gASu!rA8,po/lH7tASkmfE\\9XoChIHk@V'RoF(b\`
+        
+
+* * *
+
+#### 🔁 **ROT Ciphers**
+
+*   **ROT13 / ROT-n**
+    
+    *   Uses a Caesar shift within the 26 letters of the alphabet
+        
+*   **ROT47**
+    
+    *   Extends ROT to 94 printable ASCII characters
+        
+    *   **Example**: `E9:D:DC@Ecf4:A96C`
+        
+
+* * *
+
+#### 🔑 **Classical Ciphers**
+
+*   **Vigenère Cipher**
+    
+    *   Encrypts text using a repeating keyword
+        
+    *   **Example**: `elmltwzbrrikpgmisivptxldpcpxpx` with key `leet`
+        
+    *   Can be bruteforced if key is unknown
+        
+*   **Substitution Cipher**
+    
+    *   Each letter is replaced with another fixed letter
+        
+*   **Transposition Cipher**
+    
+    *   Rearranges the letters of the plaintext
+        
+
+* * *
+
+#### 📻 **Symbol-Based Encodings**
+
+*   **Morse Code**
+    
+    *   Dots and dashes (or "dit-dah")
+        
+    *   **Example**: `- .... .. ... .. ... -- --- .-. ... . -.-. --- -.. .`
+        
+*   **Tap Code**
+    
+    *   Similar to Polybius, based on tapping patterns
+        
+    *   **Example**: `.... .... .. ... .. .... .... ... .. .... .... ... .... .... . . .... . . ... ... ..... . .... . .....`
+        
+
+* * *
+
+#### 🧬 **Biological-Looking Encoding**
+
+*   **DNA Encoding**
+    
+    *   Uses A, T, G, C base characters
+        
+    *   **Example**:`GAGTTGAAAATATTGCGGCCGCTGGTAATGATAACATTGCGGCATTTG CTACACCGAGGCGTCGGA`
+        
+
+* * *
+
+#### 🧠 **Other Ciphers**
+
+*   **Keyboard Shift**
+    
+    *   Based on physically shifting keyboard characters (QWERTY mappings)
+        
+*   **Polybius Square**
+    
+    *   Uses a 5x5 grid to represent letters by coordinates
+        
+*   **Rail Fence Cipher**
+    
+    *   Zigzag pattern across multiple rows
+        
+*   **Bacon Cipher**
+    
+
+*   Binary-style A/B pattern representing letters
+    
+*   **Example**:`BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABAABAAAA`
+    
+
 _Tools used for solving Crypto challenges_
 
 *   [Base65536](https://github.com/qntm/base65536) - Unicode's answer to Base64.
