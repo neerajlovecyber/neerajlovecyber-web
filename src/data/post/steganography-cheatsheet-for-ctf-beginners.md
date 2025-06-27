@@ -254,38 +254,38 @@ DONE.
 
 | Tool | Category | Function |
 | --- | --- | --- |
-| `AperiSolve` | Online | Layer inspection |
-| `FotoForensics` | Online | ELA and manipulation detection |
-| `BPStegano` | CLI | LSB encoding (Python3) |
-| `Stegsolve` | GUI (Java) | Bit-layer viewer |
-| `Zsteg` | CLI | PNG/BMP LSB decoding |
-| `Steghide` | CLI | Stego in image/audio |
-| `Stegseek` | CLI | Brute-force `steghide` |
-| `Outguess` | CLI | JPG/PPM stego |
-| `Snow` [/](https://darkside.com.au/snow/) `Stegsnow` | CLI | Whitespace stego |
-| `jsteg` | CLI | JPEG LSB |
-| `sigBits` | CLI | LSB decoder |
-| `stegcracker` | CLI | JPG bruteforce stego |
-| `stegextract` | CLI | Auto extract data |
-| `ImageMagick` | CLI | Compare, convert, XOR |
-| `pngcheck` | CLI | PNG chunk inspection |
-| `pngtools` | CLI | Advanced PNG analysis |
-| `StegOnline` | Web | Encode/Decode images |
-| `Image Steganography` | Web | JS-based LSB tool |
-| `OpenStego` | GUI | Random LSB |
-| `DeepSound` | GUI | Audio file steganography |
-| `hipshot` | CLI | Video → long exposure frame |
-| `sonic-visualiser` | GUI | Audio spectrum viewer |
-| `DTMF Tools` | Audio | Decode dial tones |
-| `pdf2john` | CLI | Crack PDF password |
-| `Stegosaurus` | Python | Embed in bytecode |
-| `StegoVeritas` | Python | Multi-stego toolkit |
-| `Stegpy` | Python | Basic LSB tool |
-| `BPStegano` | Python | LSB encoding (Python3) |
-| `Steganabara` | GUI | LSB amplifier & visualizer |
-| `Magic Eye Solver` | Web | Hidden info from images |
-| `SmartDeblur` | GUI | Deblur images |
-| `Exiv2` | CLI | Image metadata manipulation |
-| `Exif` | CLI | Show EXIF info |
-| `Stegbreak` | CLI | Brute-force JPG stego |
-| `Binwalk` | CLI | Embedded file extraction |
+| [`AperiSolve`](https://aperisolve.fr/) | Online | Layer inspection |
+| [`FotoForensics`](https://fotoforensics.com/) | Online | ELA and manipulation detection |
+| [`BPStegano`](https://github.com/TapanSoni/BPStegano) | CLI | LSB encoding (Python3) |
+| [`Stegsolve`](https://github.com/zardus/ctf-tools/tree/master/stegsolve) | GUI (Java) | Bit-layer viewer |
+| [`Zsteg`](https://github.com/zed-0xff/zsteg/) | CLI | PNG/BMP LSB decoding |
+| [`Steghide`](http://steghide.sourceforge.net/) | CLI | Stego in image/audio |
+| [`Stegseek`](https://github.com/RickdeJager/stegseek) | CLI | Brute-force `steghide` |
+| [`Outguess`](https://www.freebsd.org/cgi/man.cgi?query=outguess+&apropos=0&sektion=0&manpath=FreeBSD+Ports+5.1-RELEASE&format=html) | CLI | JPG/PPM stego |
+| [`Snow`](https://darkside.com.au/snow/) / [`Stegsnow`](https://manpages.ubuntu.com/manpages/trusty/man1/stegsnow.1.html) | CLI | Whitespace stego |
+| [`jsteg`](https://github.com/lukechampine/jsteg) | CLI | JPEG LSB |
+| [`sigBits`](https://github.com/Pulho/sigBits) | CLI | LSB decoder |
+| [`stegcracker`](https://github.com/Paradoxis/StegCracker) | CLI | JPG bruteforce stego |
+| [`stegextract`](https://github.com/evyatarmeged/stegextract) | CLI | Auto extract data |
+| [`ImageMagick`](http://www.imagemagick.org/script/index.php) | CLI | Compare, convert, XOR |
+| [`pngcheck`](http://www.libpng.org/pub/png/apps/pngcheck.html) | CLI | PNG chunk inspection |
+| [`pngtools`](https://packages.debian.org/sid/pngtools) | CLI | Advanced PNG analysis |
+| [`StegOnline`](https://stegonline.georgeom.net/) | Web | Encode/Decode images |
+| [`Image Steganography`](https://incoherency.co.uk/image-steganography/) | Web | JS-based LSB tool |
+| [`OpenStego`](https://www.openstego.com/) | GUI | Random LSB |
+| [`DeepSound`](https://github.com/Jpinsoft/DeepSound) | GUI | Audio file steganography |
+| [`hipshot`](https://bitbucket.org/eliteraspberries/hipshot/src/master/) | CLI | Video → long exposure frame |
+| [`sonic-visualiser`](https://www.sonicvisualiser.org/) | GUI | Audio spectrum viewer |
+| [`DTMF Tools`](https://unframework.github.io/dtmf-detect/) | Audio | Decode dial tones |
+| [`pdf2john`](https://github.com/openwall/john) | CLI | Crack PDF password |
+| [`Stegosaurus`](https://github.com/AngelKitty/stegosaurus) | Python | Embed in bytecode |
+| [`StegoVeritas`](https://github.com/bannsec/stegoVeritas) | Python | Multi-stego toolkit |
+| [`Stegpy`](https://github.com/dhsdshdhk/stegpy) | Python | Basic LSB tool |
+| [`BPStegano`](https://github.com/TapanSoni/BPStegano) | Python | LSB encoding (Python3) |
+| [`Steganabara`](https://github.com/Denbergvanthijs/Steganabara) | GUI | LSB amplifier & visualizer |
+| [`Magic Eye Solver`](http://magiceye.ecksdee.co.uk/) | Web | Hidden info from images |
+| [`SmartDeblur`](https://github.com/Y-Vladimir/SmartDeblur) | GUI | Deblur images |
+| [`Exiv2`](https://www.exiv2.org/manpage.html) | CLI | Image metadata manipulation |
+| [`Exif`](http://manpages.ubuntu.com/manpages/trusty/man1/exif.1.html) | CLI | Show EXIF info |
+| [`Stegbreak`](https://linux.die.net/man/1/stegbreak) | CLI | Brute-force JPG stego |
+| [`Binwalk`](https://github.com/ReFirmLabs/binwalk) | CLI | Embedded file extraction |
