@@ -59,22 +59,33 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
 
 *   **Base64**
     
-    *   **Pattern**: Alphanumeric with `+` and `/`, may end with `=`
-        
-    *   **Example**: `dGhpc2lzYmFzZTY0Y2lwaGVyCg==`
-        
+
+*   **Pattern**: Alphanumeric with `+` and `/`, may end with `=`
+    
+
+```
+dGhpc2lzYmFzZTY0Y2lwaGVyCg==
+```
+
 *   **Base32**
     
-    *   **Pattern**: UPPERCASE alphanumeric, may end with `=`
-        
-    *   **Example**: `ORUGS43JONRGC43FGMZGG2LQNBSXE===`
-        
+
+*   **Pattern**: UPPERCASE alphanumeric, may end with `=`
+    
+
+```
+ORUGS43JONRGC43FGMZGG2LQNBSXE===
+```
+
 *   **Base85**
     
-    *   **Pattern**: Gibberish-like, uses extended ASCII characters
-        
-    *   **Example**: `<+oueBld\`lF(I<gASu!rA8,po/lH7tASkmfE\\9XoChIHk@V'RoF(b\`
-        
+
+*   **Pattern**: Gibberish-like, uses extended ASCII characters
+    
+
+```
+<+oueBld\lF(I<gASu!rA8,po/lH7tASkmfE\9XoChIHk@V'RoF(b`
+```
 
 * * *
 
@@ -180,25 +191,26 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
 
 *   🧬 **Brainfuck**
     
-    *   Uses a minimal set of characters like `+`, `-`, `>`, `<`, `[`, `]`, `.`, `,`
-        
-    *   Each command manipulates a memory array
-        
-    *   **Example**:
-        
+
+*   Uses a minimal set of characters like `+`, `-`, `>`, `<`, `[`, `]`, `.`, `,`
     
-    ++++++++++\[>+>+++>+++++++>++++++++++<<<<-\]>>>>++++++++++++. ------------.+.++++++++++.----------.++++++++++. -----------------.++++++++++++++++.-----------------. ++++++++.+++++.--------.+++++++++++++++. ------------------.++++++++.
+*   Each command manipulates a memory array
     
+
+```
+++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>>++++++++++++. ------------.+.++++++++++.----------.++++++++++. -----------------.++++++++++++++++.-----------------. ++++++++.+++++.--------.+++++++++++++++. ------------------.++++++++.
+```
+
 *   🧠 **JSFuck**
     
     *   JavaScript written using only 6 characters: `[]()!+`
         
     *   Used for obfuscation or in CTF challenges
         
-    *   **Example**:
-        
     
-    \[\]\[(!\[\]+\[\])\[+\[\]\]+(\[!\[\]\]+\[\]\[\[\]\])\[+!+\[\]+\[+\[\]\]\]+(!\[\]+\[\])...
+    ```
+    [][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])...
+    ```
     
 *   🧠 **Malbolge**
     
@@ -206,11 +218,10 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
         
     *   Produces gibberish-looking text (similar to Base85)
         
-    *   **Example**:
+        ```
+        ('&%:9]!~}|z2Vxwv-,POqponl$Hjig%eB@@>}=<M:9wv6WsU2T|...
+        ```
         
-    
-    ('&%:9\]!~}|z2Vxwv-,POqponl$Hjig%eB@@>}=<M:9wv6WsU2T|...
-    
 
 🧠 **Whitespace**
 
