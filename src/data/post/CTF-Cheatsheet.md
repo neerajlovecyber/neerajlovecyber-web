@@ -55,7 +55,7 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
 
 **🔐 Common CTF Cipher Formats & Encodings checklist (CTF cryptography Cheatsheet)**
 
-#### 📦 **Base Encodings**
+#### 📦 **Base Encodings -**
 
 *   **Base64**
     
@@ -237,127 +237,133 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
 
 **🔐 RSA Attacks and Variants**
 
-🔢 **Classic RSA**
-
-*   Given:
+*   🔢 **Classic RSA**
     
-    *   `n`: modulus (product of two primes)
+    *   Given:
         
-    *   `e`: public exponent
+        *   `n`: modulus (product of two primes)
+            
+        *   `e`: public exponent
+            
+        *   `c`: ciphertext
+            
+    *   **Goal**: Decrypt `c` using factorization of `n`
         
-    *   `c`: ciphertext
-        
-*   **Goal**: Decrypt `c` using factorization of `n`
+*   **🧩 Multi-Prime RSA**
     
-
-**🧩 Multi-Prime RSA**
-
-*   Similar to classic RSA
-    
-*   `n` has more than two prime factors
-    
-*   Makes `n` easier to factor
-    
-
-🧨 **Cube Root Attack (Low Exponent Attack)**
-
-*   Used when:
-    
-    *   `e = 3`
+    *   Similar to classic RSA
         
-    *   Message `m` is small
+    *   `n` has more than two prime factors
         
-*   Works if `m³ < n`
+    *   Makes `n` easier to factor
+        
+*   🧨 **Cube Root Attack (Low Exponent Attack)**
     
-
-🧠 **Wiener's Attack**
-
-*   Works when:
+    *   Used when:
+        
+        *   `e = 3`
+            
+        *   Message `m` is small
+            
+    *   Works if `m³ < n`
+        
+*   🧠 **Wiener's Attack**
     
-    *   `e` is too large
+    *   Works when:
         
-    *   `d` (private exponent) is small
+        *   `e` is too large
+            
+        *   `d` (private exponent) is small
+            
+    *   Uses continued fractions to find `d`
         
-*   Uses continued fractions to find `d`
+*   🔁 **Common Modulus Attack**
     
-
-🔁 **Common Modulus Attack**
-
-*   Given:
+    *   Given:
+        
+        *   Same `n`
+            
+        *   Different exponents `e1`, `e2`
+            
+        *   Corresponding ciphertexts `c1`, `c2`
+            
+    *   Works when plaintext is encrypted twice with different exponents
+        
+*   🇨🇳 **Chinese Remainder Theorem Attack**
     
-    *   Same `n`
+    *   Given:
         
-    *   Different exponents `e1`, `e2`
+        *   `p`, `q`: prime factors
+            
+        *   `dp`, `dq`: partial private keys
+            
+        *   `c`: ciphertext
+            
+    *   Reconstructs private key and decrypts
         
-    *   Corresponding ciphertexts `c1`, `c2`
-        
-*   Works when plaintext is encrypted twice with different exponents
+*   ♊ **Twin Prime RSA**
     
-
-🇨🇳 **Chinese Remainder Theorem Attack**
-
-*   Given:
-    
-    *   `p`, `q`: prime factors
+    *   Given:
         
-    *   `dp`, `dq`: partial private keys
+        *   `n1`, `n2`: moduli generated from twin primes
+            
+        *   `e`: exponent
+            
+        *   `c`: ciphertext
+            
+    *   Exploits close relationship between `n1` and `n2` to factor easily
         
-    *   `c`: ciphertext
+        * * *
         
-*   Reconstructs private key and decrypts
-    
-
-♊ **Twin Prime RSA**
-
-*   Given:
-    
-    *   `n1`, `n2`: moduli generated from twin primes
-        
-    *   `e`: exponent
-        
-    *   `c`: ciphertext
-        
-*   Exploits close relationship between `n1` and `n2` to factor easily
-    
-    * * *
-    
 
 #### **🧩 Symbol Cipher**
 
 *   **🔐 Pigpen Cipher**  
-    A substitution cipher where letters are replaced with symbols based on a grid or “pigpen” shapes. Commonly seen in treasure hunts and historical codes./
+    A substitution cipher where letters are replaced with symbols based on a grid or “pigpen” shapes. Commonly seen in treasure hunts and historical codes.
     
     ![](src/assets/images/posts/ctf-cheatsheet/pigpen%20chipher.png)
     
+    *   Decoder - [https://www.dcode.fr/pigpen-cipher](https://www.dcode.fr/pigpen-cipher)
+        
 *   **👽 Futurama Cipher**  
     Appeared in the animated series _Futurama_, this cipher uses alien-like symbols. Two versions exist as easter eggs within the show.
     
     ![](src/assets/images/posts/ctf-cheatsheet/Futurama%20Cipher.png)
     
+    *   [Decoder - https://www.dcode.fr/futurama-alien-alphabet](https://www.dcode.fr/futurama-alien-alphabet)
+        
 *   **🗡 Hylian Cipher (Twilight Princess)**  
     A symbolic script from _The Legend of Zelda: Twilight Princess_. Mostly decorative but can be decoded to reveal messages.
     
     ![](src/assets/images/posts/ctf-cheatsheet/Hylian%20Cipher%20(Twilight%20Princess).png)
     
+    *   Decoder - [https://www.dcode.fr/hylian-language-twilight-princess](https://www.dcode.fr/hylian-language-twilight-princess)
+        
 *   **🌌 Hylian Cipher (Skyward Sword)**  
     Another Hylian variant from _Skyward Sword_, maps symbols directly to English letters, used throughout the game world.
     
     ![](src/assets/images/posts/ctf-cheatsheet/Hylian%20Cipher%20(Skyward%20Cipher).png)
     
+    *   Decoder - [https://www.dcode.fr/hylian-language-skyward-sword](https://www.dcode.fr/hylian-language-skyward-sword)
+        
 *   **🌿 Hylian Cipher (Breath of the Wild)**  
     Unique to _Breath of the Wild_, this version is used on signs, tablets, and game items. It has an established decoding chart.
     
     ![](src/assets/images/posts/ctf-cheatsheet/Hylian%20Cipher%20(Breadth%20Of%20The%20Wild).png)
     
-    #### 🗡 Dagger Alphabet
+    *   Decoder - [https://www.dcode.fr/hylian-language-breath-of-the-wild](https://www.dcode.fr/hylian-language-breath-of-the-wild)
+        
+*   🗡 Dagger Alphabet
     
-*   A fantasy-themed symbolic script often found in games or fictional lore. It functions as a substitution cipher with symbols representing letters.
+    A fantasy-themed symbolic script often found in games or fictional lore. It functions as a substitution cipher with symbols representing letters.
     
     ![](src/assets/images/posts/ctf-cheatsheet/Dagger%20Alphabet.png)
     
-    #### 🧙 Gravity Falls Cipher
+    *   Decoder - [https://www.dcode.fr/daggers-alphabet](https://www.dcode.fr/daggers-alphabet)
+        
+*   🧙 Gravity Falls Cipher
     
-*   Used throughout the show _Gravity Falls_, these include Caesar, Atbash, A1Z26, and others. Fans decode hidden messages from end credits and clues.
+    Used throughout the show _Gravity Falls_, these include Caesar, Atbash, A1Z26, and others. Fans decode hidden messages from end credits and clues.
     
     ![](src/assets/images/posts/ctf-cheatsheet/Gravity%20Fall.webp)
     
@@ -367,6 +373,8 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     
     ![](src/assets/images/posts/ctf-cheatsheet/Dancing%20Men%20Cipher.png)
     
+    *   Decoder - [https://www.dcode.fr/daggers-alphabet](https://www.dcode.fr/daggers-alphabet)
+        
 
 * * *
 
