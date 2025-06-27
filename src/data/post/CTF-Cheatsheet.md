@@ -195,8 +195,6 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     ++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>>++++++++++++. ------------.+.++++++++++.----------.++++++++++. -----------------.++++++++++++++++.-----------------. ++++++++.+++++.--------.+++++++++++++++. ------------------.++++++++.
     ```
     
-    * * *
-    
     #### 🧠 **JSFuck**
     
     *   JavaScript written using only 6 characters: `[]()!+`
@@ -209,8 +207,6 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     ```
     [][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])...
     ```
-    
-    * * *
     
     #### 🧠 **Malbolge**
     
@@ -225,8 +221,6 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     ('&%:9]!~}|z2Vxwv-,POqponl$Hjig%eB@@>}=<M:9wv6WsU2T|...
     ```
     
-    * * *
-    
     #### 🧠 **Whitespace**
     
     *   Code is written using only spaces, tabs, and newlines
@@ -239,8 +233,6 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
             
         *   `0x0A` (Line Feed)
             
-    
-    * * *
     
     #### 🧠 **PikaLang**
     
@@ -255,8 +247,6 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     
     **🔐 RSA Attacks and Variants**
     
-    * * *
-    
     🔢 **Classic RSA**
     
     *   Given:
@@ -270,9 +260,7 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     *   **Goal**: Decrypt `c` using factorization of `n`
         
     
-    * * *
-    
-    🧩 **Multi-Prime RSA**
+    **🧩 Multi-Prime RSA**
     
     *   Similar to classic RSA
         
@@ -280,8 +268,6 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
         
     *   Makes `n` easier to factor
         
-    
-    * * *
     
     🧨 **Cube Root Attack (Low Exponent Attack)**
     
@@ -294,8 +280,6 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     *   Works if `m³ < n`
         
     
-    * * *
-    
     🧠 **Wiener's Attack**
     
     *   Works when:
@@ -306,8 +290,6 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
             
     *   Uses continued fractions to find `d`
         
-    
-    * * *
     
     🔁 **Common Modulus Attack**
     
@@ -322,8 +304,6 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     *   Works when plaintext is encrypted twice with different exponents
         
     
-    * * *
-    
     🇨🇳 **Chinese Remainder Theorem Attack**
     
     *   Given:
@@ -336,8 +316,6 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
             
     *   Reconstructs private key and decrypts
         
-    
-    * * *
     
     ♊ **Twin Prime RSA**
     
