@@ -144,10 +144,13 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
 
 *   **DNA Encoding**
     
-    *   Uses A, T, G, C base characters
-        
-    *   **Example**:`GAGTTGAAAATATTGCGGCCGCTGGTAATGATAACATTGCGGCATTTG CTACACCGAGGCGTCGGA`
-        
+
+*   Uses A, T, G, C base characters
+    
+
+```
+GAGTTGAAAATATTGCGGCCGCTGGTAATGATAACATTGCGGCATTTG CTACACCGAGGCGTCGGA
+```
 
 * * *
 
@@ -170,9 +173,12 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
 
 *   Binary-style A/B pattern representing letters
     
-*   **Example**:`BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABAABAAAA`
-    
-    🧠 **Esoteric Languages**
+
+```
+BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABAABAAAA
+```
+
+*   🧠 **Esoteric Languages**
     
     * * *
     
@@ -184,8 +190,10 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
         
     *   **Example**:
         
-        *   `++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>>++++++++++++. ------------.+.++++++++++.----------.++++++++++. -----------------.++++++++++++++++.-----------------. ++++++++.+++++.--------.+++++++++++++++. ------------------.++++++++.`
-            
+    
+    ```
+    ++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>>++++++++++++. ------------.+.++++++++++.----------.++++++++++. -----------------.++++++++++++++++.-----------------. ++++++++.+++++.--------.+++++++++++++++. ------------------.++++++++.
+    ```
     
     * * *
     
@@ -197,8 +205,10 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
         
     *   **Example**:
         
-        *   `[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])...`
-            
+    
+    ```
+    [][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])...
+    ```
     
     * * *
     
@@ -210,8 +220,10 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
         
     *   **Example**:
         
-        *   `('&%:9]!~}|z2Vxwv-,POqponl$Hjig%eB@@>}=<M:9wv6WsU2T|...`
-            
+    
+    ```
+    ('&%:9]!~}|z2Vxwv-,POqponl$Hjig%eB@@>}=<M:9wv6WsU2T|...
+    ```
     
     * * *
     
@@ -241,11 +253,11 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
     
     * * *
     
-    ## 🔐 RSA Attacks and Variants
+    **🔐 RSA Attacks and Variants**
     
     * * *
     
-    ### 🔢 **Classic RSA**
+    🔢 **Classic RSA**
     
     *   Given:
         
@@ -260,7 +272,7 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
     
     * * *
     
-    ### 🧩 **Multi-Prime RSA**
+    🧩 **Multi-Prime RSA**
     
     *   Similar to classic RSA
         
@@ -271,7 +283,7 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
     
     * * *
     
-    ### 🧨 **Cube Root Attack (Low Exponent Attack)**
+    🧨 **Cube Root Attack (Low Exponent Attack)**
     
     *   Used when:
         
@@ -284,7 +296,7 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
     
     * * *
     
-    ### 🧠 **Wiener's Attack**
+    🧠 **Wiener's Attack**
     
     *   Works when:
         
@@ -297,7 +309,7 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
     
     * * *
     
-    ### 🔁 **Common Modulus Attack**
+    🔁 **Common Modulus Attack**
     
     *   Given:
         
@@ -312,7 +324,7 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
     
     * * *
     
-    ### 🇨🇳 **Chinese Remainder Theorem Attack**
+    🇨🇳 **Chinese Remainder Theorem Attack**
     
     *   Given:
         
@@ -327,7 +339,7 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
     
     * * *
     
-    ### ♊ **Twin Prime RSA**
+    ♊ **Twin Prime RSA**
     
     *   Given:
         
