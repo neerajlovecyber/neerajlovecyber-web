@@ -211,113 +211,162 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     
     ('&%:9\]!~}|z2Vxwv-,POqponl$Hjig%eB@@>}=<M:9wv6WsU2T|...
     
-*   🧠 **Whitespace**
+
+🧠 **Whitespace**
+
+*   Code is written using only spaces, tabs, and newlines
     
-    *   Code is written using only spaces, tabs, and newlines
+*   Common byte values:
+    
+    *   `0x20` (Space),
         
-    *   Common byte values:
+    *   `0x09` (Tab),
         
-        *   `0x20` (Space),
-            
-        *   `0x09` (Tab),
-            
-        *   `0x0A` (Line Feed)
-            
-    *   🧠 **PikaLang**
+    *   `0x0A` (Line Feed)
         
-        *   Uses Pokémon-like sounds such as `pi`, `pika`, `ka`, `pipi`
-            
-        *   Typically encodes data using custom encoding logic
-            
-        *   May even implement RSA in challenges
-            
+*   🧠 **PikaLang**
+    
+    *   Uses Pokémon-like sounds such as `pi`, `pika`, `ka`, `pipi`
+        
+    *   Typically encodes data using custom encoding logic
+        
+    *   May even implement RSA in challenges
+        
+
+* * *
+
+**🔐 RSA Attacks and Variants**
+
+🔢 **Classic RSA**
+
+*   Given:
+    
+    *   `n`: modulus (product of two primes)
+        
+    *   `e`: public exponent
+        
+    *   `c`: ciphertext
+        
+*   **Goal**: Decrypt `c` using factorization of `n`
+    
+
+**🧩 Multi-Prime RSA**
+
+*   Similar to classic RSA
+    
+*   `n` has more than two prime factors
+    
+*   Makes `n` easier to factor
+    
+
+🧨 **Cube Root Attack (Low Exponent Attack)**
+
+*   Used when:
+    
+    *   `e = 3`
+        
+    *   Message `m` is small
+        
+*   Works if `m³ < n`
+    
+
+🧠 **Wiener's Attack**
+
+*   Works when:
+    
+    *   `e` is too large
+        
+    *   `d` (private exponent) is small
+        
+*   Uses continued fractions to find `d`
+    
+
+🔁 **Common Modulus Attack**
+
+*   Given:
+    
+    *   Same `n`
+        
+    *   Different exponents `e1`, `e2`
+        
+    *   Corresponding ciphertexts `c1`, `c2`
+        
+*   Works when plaintext is encrypted twice with different exponents
+    
+
+🇨🇳 **Chinese Remainder Theorem Attack**
+
+*   Given:
+    
+    *   `p`, `q`: prime factors
+        
+    *   `dp`, `dq`: partial private keys
+        
+    *   `c`: ciphertext
+        
+*   Reconstructs private key and decrypts
+    
+
+♊ **Twin Prime RSA**
+
+*   Given:
+    
+    *   `n1`, `n2`: moduli generated from twin primes
+        
+    *   `e`: exponent
+        
+    *   `c`: ciphertext
+        
+*   Exploits close relationship between `n1` and `n2` to factor easily
     
     * * *
     
-    **🔐 RSA Attacks and Variants**
+
+#### **🧩 Symbol Cipher**
+
+*   **🔐 Pigpen Cipher**  
+    A substitution cipher where letters are replaced with symbols based on a grid or “pigpen” shapes. Commonly seen in treasure hunts and historical codes./
     
-    🔢 **Classic RSA**
+    ![](src/assets/images/posts/ctf-cheatsheet/pigpen%20chipher.png)
     
-    *   Given:
-        
-        *   `n`: modulus (product of two primes)
-            
-        *   `e`: public exponent
-            
-        *   `c`: ciphertext
-            
-    *   **Goal**: Decrypt `c` using factorization of `n`
-        
+*   **👽 Futurama Cipher**  
+    Appeared in the animated series _Futurama_, this cipher uses alien-like symbols. Two versions exist as easter eggs within the show.
     
-    **🧩 Multi-Prime RSA**
+    ![](src/assets/images/posts/ctf-cheatsheet/Futurama%20Cipher.png)
     
-    *   Similar to classic RSA
-        
-    *   `n` has more than two prime factors
-        
-    *   Makes `n` easier to factor
-        
+*   **🗡 Hylian Cipher (Twilight Princess)**  
+    A symbolic script from _The Legend of Zelda: Twilight Princess_. Mostly decorative but can be decoded to reveal messages.
     
-    🧨 **Cube Root Attack (Low Exponent Attack)**
+    ![](src/assets/images/posts/ctf-cheatsheet/Hylian%20Cipher%20(Twilight%20Princess).png)
     
-    *   Used when:
-        
-        *   `e = 3`
-            
-        *   Message `m` is small
-            
-    *   Works if `m³ < n`
-        
+*   **🌌 Hylian Cipher (Skyward Sword)**  
+    Another Hylian variant from _Skyward Sword_, maps symbols directly to English letters, used throughout the game world.
     
-    🧠 **Wiener's Attack**
+    ![](src/assets/images/posts/ctf-cheatsheet/Hylian%20Cipher%20(Skyward%20Cipher).png)
     
-    *   Works when:
-        
-        *   `e` is too large
-            
-        *   `d` (private exponent) is small
-            
-    *   Uses continued fractions to find `d`
-        
+*   **🌿 Hylian Cipher (Breath of the Wild)**  
+    Unique to _Breath of the Wild_, this version is used on signs, tablets, and game items. It has an established decoding chart.
     
-    🔁 **Common Modulus Attack**
+    ![](src/assets/images/posts/ctf-cheatsheet/Hylian%20Cipher%20(Breadth%20Of%20The%20Wild).png)
     
-    *   Given:
-        
-        *   Same `n`
-            
-        *   Different exponents `e1`, `e2`
-            
-        *   Corresponding ciphertexts `c1`, `c2`
-            
-    *   Works when plaintext is encrypted twice with different exponents
-        
+    #### 🗡 Dagger Alphabet
     
-    🇨🇳 **Chinese Remainder Theorem Attack**
+*   A fantasy-themed symbolic script often found in games or fictional lore. It functions as a substitution cipher with symbols representing letters.
     
-    *   Given:
-        
-        *   `p`, `q`: prime factors
-            
-        *   `dp`, `dq`: partial private keys
-            
-        *   `c`: ciphertext
-            
-    *   Reconstructs private key and decrypts
-        
+    ![](src/assets/images/posts/ctf-cheatsheet/Dagger%20Alphabet.png)
     
-    ♊ **Twin Prime RSA**
+    #### 🧙 Gravity Falls Cipher
     
-    *   Given:
-        
-        *   `n1`, `n2`: moduli generated from twin primes
-            
-        *   `e`: exponent
-            
-        *   `c`: ciphertext
-            
-    *   Exploits close relationship between `n1` and `n2` to factor easily
-        
+*   Used throughout the show _Gravity Falls_, these include Caesar, Atbash, A1Z26, and others. Fans decode hidden messages from end credits and clues.
+    
+    ![](src/assets/images/posts/ctf-cheatsheet/Gravity%20Fall.webp)
+    
+    #### 💃 Dancing Men Cipher
+    
+*   Inspired by Sherlock Holmes, this cipher uses stick figures in various poses to represent letters. It’s a monoalphabetic substitution cipher from the story _The Adventure of the Dancing Men_.
+    
+    ![](src/assets/images/posts/ctf-cheatsheet/Dancing%20Men%20Cipher.png)
+    
 
 * * *
 
