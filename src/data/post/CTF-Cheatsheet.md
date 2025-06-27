@@ -118,16 +118,25 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
 
 *   **Morse Code**
     
-    *   Dots and dashes (or "dit-dah")
-        
-    *   **Example**: `- .... .. ... .. ... -- --- .-. ... . -.-. --- -.. .`
-        
+
+*   Dots and dashes (or "dit-dah")
+    
+
+```
+.... .. ... .. ... -- --- .-. ... . -.-. --- -.. .
+```
+
 *   **Tap Code**
     
-    *   Similar to Polybius, based on tapping patterns
-        
-    *   **Example**: `.... .... .. ... .. .... .... ... .. .... .... ... .... .... . . .... . . ... ... ..... . .... . .....`
-        
+
+*   Similar to Polybius, based on tapping patterns
+    
+*   **Example**:
+    
+
+```
+.... .... .. ... .. .... .... ... .. .... .... ... .... .... . . .... . . ... ... ..... . .... . .....
+```
 
 * * *
 
