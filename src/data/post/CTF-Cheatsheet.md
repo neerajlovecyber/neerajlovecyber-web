@@ -163,6 +163,175 @@ Anyone from beginners to experts can participate, and many CTFs are open to the 
     
 *   **Example**:`BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABAABAAAA`
     
+    🧠 **Esoteric Languages**
+    
+    * * *
+    
+    #### 🧬 **Brainfuck**
+    
+    *   Uses a minimal set of characters like `+`, `-`, `>`, `<`, `[`, `]`, `.`, `,`
+        
+    *   Each command manipulates a memory array
+        
+    *   **Example**:
+        
+        *   `++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>>++++++++++++. ------------.+.++++++++++.----------.++++++++++. -----------------.++++++++++++++++.-----------------. ++++++++.+++++.--------.+++++++++++++++. ------------------.++++++++.`
+            
+    
+    * * *
+    
+    #### 🧠 **JSFuck**
+    
+    *   JavaScript written using only 6 characters: `[]()!+`
+        
+    *   Used for obfuscation or in CTF challenges
+        
+    *   **Example**:
+        
+        *   `[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])...`
+            
+    
+    * * *
+    
+    #### 🧠 **Malbolge**
+    
+    *   Infamously hard to write and understand
+        
+    *   Produces gibberish-looking text (similar to Base85)
+        
+    *   **Example**:
+        
+        *   `('&%:9]!~}|z2Vxwv-,POqponl$Hjig%eB@@>}=<M:9wv6WsU2T|...`
+            
+    
+    * * *
+    
+    #### 🧠 **Whitespace**
+    
+    *   Code is written using only spaces, tabs, and newlines
+        
+    *   Common byte values:
+        
+        *   `0x20` (Space),
+            
+        *   `0x09` (Tab),
+            
+        *   `0x0A` (Line Feed)
+            
+    
+    * * *
+    
+    #### 🧠 **PikaLang**
+    
+    *   Uses Pokémon-like sounds such as `pi`, `pika`, `ka`, `pipi`
+        
+    *   Typically encodes data using custom encoding logic
+        
+    *   May even implement RSA in challenges
+        
+    
+    * * *
+    
+    ## 🔐 RSA Attacks and Variants
+    
+    * * *
+    
+    ### 🔢 **Classic RSA**
+    
+    *   Given:
+        
+        *   `n`: modulus (product of two primes)
+            
+        *   `e`: public exponent
+            
+        *   `c`: ciphertext
+            
+    *   **Goal**: Decrypt `c` using factorization of `n`
+        
+    
+    * * *
+    
+    ### 🧩 **Multi-Prime RSA**
+    
+    *   Similar to classic RSA
+        
+    *   `n` has more than two prime factors
+        
+    *   Makes `n` easier to factor
+        
+    
+    * * *
+    
+    ### 🧨 **Cube Root Attack (Low Exponent Attack)**
+    
+    *   Used when:
+        
+        *   `e = 3`
+            
+        *   Message `m` is small
+            
+    *   Works if `m³ < n`
+        
+    
+    * * *
+    
+    ### 🧠 **Wiener's Attack**
+    
+    *   Works when:
+        
+        *   `e` is too large
+            
+        *   `d` (private exponent) is small
+            
+    *   Uses continued fractions to find `d`
+        
+    
+    * * *
+    
+    ### 🔁 **Common Modulus Attack**
+    
+    *   Given:
+        
+        *   Same `n`
+            
+        *   Different exponents `e1`, `e2`
+            
+        *   Corresponding ciphertexts `c1`, `c2`
+            
+    *   Works when plaintext is encrypted twice with different exponents
+        
+    
+    * * *
+    
+    ### 🇨🇳 **Chinese Remainder Theorem Attack**
+    
+    *   Given:
+        
+        *   `p`, `q`: prime factors
+            
+        *   `dp`, `dq`: partial private keys
+            
+        *   `c`: ciphertext
+            
+    *   Reconstructs private key and decrypts
+        
+    
+    * * *
+    
+    ### ♊ **Twin Prime RSA**
+    
+    *   Given:
+        
+        *   `n1`, `n2`: moduli generated from twin primes
+            
+        *   `e`: exponent
+            
+        *   `c`: ciphertext
+            
+    *   Exploits close relationship between `n1` and `n2` to factor easily
+        
+
+* * *
 
 **_Tools used for solving Crypto challenges_**
 
