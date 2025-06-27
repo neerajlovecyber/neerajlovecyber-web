@@ -585,6 +585,7 @@ Check [solve section for steganography](#steganography-1).
 _Tools used to create Web challenges_
 
 *   [Metasploit JavaScript Obfuscator](https://github.com/rapid7/metasploit-framework/wiki/How-to-obfuscate-JavaScript-in-Metasploit) - How to obfuscate JavaScript in Metasploit.
+    
 
 ## Resources
 
@@ -592,6 +593,8 @@ _Tools used to create Web challenges_
 
 _Always online CTFs_
 
+*   [Tryhackme](https://tryhackme.com/) - My favourite, best for beginners
+    
 *   [0x0539](https://0x0539.net/) - Online CTF challenges.
     
 *   [247CTF](https://247ctf.com/) - Free Capture The Flag Hacking Environment.
@@ -698,6 +701,7 @@ _Repository of CTF Writeups_
 ### Courses
 
 *   [Roppers Bootcamp](https://www.roppers.org/courses/ctf) - CTF Bootcamp.
+    
 
 * * *
 
