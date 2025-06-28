@@ -25,8 +25,8 @@ export const AdBlockDetector: React.FC<{ mode?: "strict" | "delay" }> = ({ mode 
       // You can customize what happens when an ad blocker is detected
       console.log("Ad blocker detected");
       // Dynamically inject Buy Me a Coffee button script
-      const container = document.getElementById('bmc-button-container');
-      if (container && !container.querySelector('script[data-name="bmc-button"]')) {
+      const bmcContainer = document.getElementById('bmc-button-container');
+      if (bmcContainer && !bmcContainer.querySelector('script[data-name="bmc-button"]')) {
         const script = document.createElement('script');
         script.setAttribute('is:inline', '');
         script.type = 'text/javascript';
@@ -40,7 +40,25 @@ export const AdBlockDetector: React.FC<{ mode?: "strict" | "delay" }> = ({ mode 
         script.setAttribute('data-outline-color', '#000000');
         script.setAttribute('data-font-color', '#000000');
         script.setAttribute('data-coffee-color', '#ffffff');
-        container.appendChild(script);
+        bmcContainer.appendChild(script);
+      }
+
+      // Dynamically inject Google Analytics script if not already present
+      if (typeof window !== 'undefined' && !window.gtag) {
+        const gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-GQMKSE94S0';
+        document.head.appendChild(gaScript);
+
+        const gaScriptInit = document.createElement('script');
+        gaScriptInit.setAttribute('is:inline', '');
+        gaScriptInit.innerHTML = `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-GQMKSE94S0');
+        `;
+        document.head.appendChild(gaScriptInit);
       }
       if (mode === "delay") {
         setShowContinue(false);
