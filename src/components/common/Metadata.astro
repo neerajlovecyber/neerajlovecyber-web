@@ -1,8 +1,7 @@
 ---
 import merge from 'lodash.merge';
 import { AstroSeo } from '@astrolib/seo';
-
-import type { Props as AstroSeoProps } from '@astrolib/seo';
+import { getAsset } from '~/utils/permalinks';
 
 import { SITE, METADATA, I18N } from 'astrowind:config';
 import type { MetaData } from '~/types';
@@ -11,7 +10,19 @@ import { getCanonical } from '~/utils/permalinks';
 import { adaptOpenGraphImages } from '~/utils/images';
 
 export interface Props extends MetaData {
-  dontUseTitleTemplate?: boolean;
+  ignoreTitleTemplate?: boolean;
+  robots?: {
+    index?: boolean;
+    follow?: boolean;
+  };
+  openGraph?: {
+    images?: { url: string; width?: number; height?: number }[];
+    [key: string]: unknown;
+  };
+  twitter?: {
+    cardType?: string;
+    [key: string]: unknown;
+  };
 }
 
 const {
@@ -22,25 +33,89 @@ const {
   description,
   openGraph = {},
   twitter = {},
+  image: _image,
+  ogTitle = title,
+  ogType = 'website',
+  ogImage = _image,
+  twitterTitle = title,
+  twitterImage = _image,
+  twitterCard = 'summary_large_image',
+  publishDate,
+  updateDate,
+  author,
 } = Astro.props;
 
-const seoProps: AstroSeoProps = merge(
+// Process canonical URL
+const canonicalUrl = canonical ? (typeof canonical === 'string' ? new URL(canonical, Astro.site) : canonical) : new URL(Astro.url.pathname, Astro.site);
+
+// Generate structured data for blog posts
+const generateStructuredData = () => {
+  if (ogType === 'article') {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: title,
+      description: description,
+      image: ogImage instanceof URL ? ogImage.href : getAsset('/default-og-image.jpg'),
+      datePublished: publishDate ? new Date(publishDate).toISOString() : null,
+      dateModified: updateDate ? new Date(updateDate).toISOString() : (publishDate ? new Date(publishDate).toISOString() : null),
+      author: author ? {
+        '@type': 'Person',
+        name: author
+      } : {
+        '@type': 'Person',
+        name: SITE.name,
+        url: SITE.origin
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: SITE.name,
+        logo: {
+          '@type': 'ImageObject',
+          url: getAsset('/logo.png')
+        }
+      },
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': canonicalUrl.href
+      }
+    };
+  } else if (ogType === 'website') {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: SITE.name,
+      description: METADATA.description,
+      url: SITE.origin
+    };
+  }
+  return null;
+};
+
+const structuredData = generateStructuredData();
+
+// Using type assertion to handle the complex merged type
+// Using a more specific type for seoProps
+const seoProps = merge(
   {
     title: '',
     titleTemplate: '%s',
-    canonical: canonical,
+    canonical: canonicalUrl.href,
     noindex: true,
     nofollow: true,
     description: METADATA?.description,
     openGraph: {
-      url: canonical,
+      url: canonicalUrl.href,
       site_name: SITE?.name,
       images: [],
       locale: I18N?.language || 'en',
-      type: 'website',
+      type: ogType,
+      title: ogTitle,
     },
     twitter: {
-      cardType: openGraph?.images?.length ? 'summary_large_image' : 'summary',
+      cardType: twitterCard || (openGraph?.images?.length ? 'summary_large_image' : 'summary'),
+      title: twitterTitle,
+      image: twitterImage instanceof URL ? twitterImage.href : undefined,
     },
   },
   {
@@ -55,14 +130,19 @@ const seoProps: AstroSeoProps = merge(
   {
     title: title,
     titleTemplate: ignoreTitleTemplate ? '%s' : undefined,
-    canonical: canonical,
+    canonical: canonicalUrl.href,
     noindex: typeof robots?.index !== 'undefined' ? !robots.index : undefined,
     nofollow: typeof robots?.follow !== 'undefined' ? !robots.follow : undefined,
     description: description,
-    openGraph: { url: canonical, ...openGraph },
+    openGraph: { url: canonicalUrl.href, ...openGraph },
     twitter: twitter,
   }
 );
 ---
 
 <AstroSeo {...{ ...seoProps, openGraph: await adaptOpenGraphImages(seoProps?.openGraph, Astro.site) }} />
+
+{/* Add structured data for rich results */}
+{structuredData && (
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+)}
