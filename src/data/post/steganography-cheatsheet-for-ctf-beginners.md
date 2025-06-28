@@ -38,6 +38,8 @@ exiftool target.jpg
 
 Extract EXIF comments, timestamps, GPS info, and hidden metadata.
 
+![](src/assets/images/posts/ctf-cheatsheet/exiftool_ctf_challange.webp)
+
 Also try:
 
 ```
@@ -71,6 +73,50 @@ For direct metadata manipulation or cleanup.
 
 Use `dd` if you manually need to extract embedded segments.
 
+### Example: Extracting Hidden Files from an Image
+
+Let’s walk through a practical use case with a stego challenge:
+
+**Step 1:**  
+Start with a quick string check:
+
+```
+strings PurpleThing.jpeg | grep {
+```
+
+No flag found via visible strings.
+
+**Step 2:**  
+Now inspect with binwalk:
+
+```
+binwalk PurpleThing.jpeg
+```
+
+**Output:**
+
+```
+DECIMAL HEXADECIMAL DESCRIPTION -------------------------------------------------------------------------------- 0 0x0 PNG image, 780 x 720, 8-bit/color RGBA, non-interlaced 41 0x29 Zlib compressed data, best compression 153493 0x25795 PNG image, 802 x 118, 8-bit/color RGBA, non-interlaced
+```
+
+We clearly see embedded PNG and Zlib data.
+
+**Step 3:**  
+Extract the hidden files using:
+
+```
+binwalk -D 'image:png' PurpleThing.jpeg
+```
+
+This creates a folder named `_PurpleThing.jpeg.extracted/`, containing extracted files like `25795.png`.
+
+**Step 4:**  
+Open that file and boom — the flag is there:
+
+```
+ABCTF{b1nw4lk_is_us3ful}
+```
+
 * * *
 
 ## 🎨 Image Steganography
@@ -102,7 +148,19 @@ compare original.png modified.png diff.png
 | pngcheck | Dump/analyze PNG chunks |
 | pngtools | Deep chunk-level PNG analysis |
 
-Use stegsolve to identify QR codes, LSB data, or color-filtered patterns.
+**Stegsolve -**
+
+Use **stegsolve** to identify QR codes, LSB data, or color-filtered patterns.
+
+A great GUI tool that covers a wide range of analysis, some of which is covered by the other tools mentioned above and a lot more including color profiles, planes, Color maps, strings.
+
+**Example Challange:**
+
+![](src/assets/images/posts/ctf-cheatsheet/stegsolve%20challange.jpg)
+
+**Solution:** Opening the image in Stegsolve and clicking through the planes gives us a flag. Image below.
+
+![](src/assets/images/posts/ctf-cheatsheet/stesolve%20solution.png)
 
 * * *
 
@@ -160,6 +218,12 @@ steghide extract -sf secret.jpg stegseek secret.jpg rockyou.txt
 
 Use [**sonic-visualiser**](https://www.sonicvisualiser.org/) with linear/log scale spectrogram + contrast filters.
 
+Sonic Visualizer is a great tool to find hidden messages in audio files.
+
+Remember that just because it’s a mp3 does not mean it’s going to have an answer in the spectrogram. I am going to show you one more Spectrogram with a flag in it.
+
+![](src/assets/images/posts/ctf-cheatsheet/spectro-flag.jpg)
+
 * * *
 
 ## 🎥 Video Steganography
@@ -195,6 +259,19 @@ pdf2john file.pdf > hash.txt john --wordlist=rockyou.txt hash.txt
 ```
 
 * * *
+
+## 🌐 Network-Based Challenges
+
+### 🦈 **Wireshark**
+
+Sometimes you’ll get `.pcap` files. Open them in Wireshark and follow the TCP or HTTP stream to uncover credentials or base64-encoded data.
+
+*   Right-click a packet → Follow → TCP Stream
+    
+    ![](src/assets/images/posts/ctf-cheatsheet/wireshark%20ctf%20challange.webp)
+    
+
+Look for anything readable—sometimes even the flag itself!
 
 ## 🔥 Advanced Tricks & Scripts
 
