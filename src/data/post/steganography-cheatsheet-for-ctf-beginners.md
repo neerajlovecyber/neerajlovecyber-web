@@ -5,6 +5,7 @@ excerpt: A complete Steganography 101 CTF Cheatsheet covering essential tools,
   techniques, and tips to solve image, audio, and file-based stego challenges.
   Perfect for beginners and CTF players looking to master hidden data analysis.
 publishDate: 2025-06-27 22:58
+image: src/assets/images/posts/Stenography-ctf-cheatsheet.png
 tags:
   - cheatsheet
   - Steganography
@@ -153,8 +154,8 @@ steghide extract -sf secret.jpg stegseek secret.jpg rockyou.txt
 | DeepSound | Hide/extract files in .wav audio |
 | sonic-visualiser | Visualize spectrograms, waveforms |
 | audacity | Waveform editing, reversal, decoding |
-|
- | Decodes dial tones from audio |
+|     |     |
+| Decodes dial tones from audio |     |
 | Snow [/](https://darkside.com.au/snow/) stegsnow | Whitespace stego in audio |
 
 Use [**sonic-visualiser**](https://www.sonicvisualiser.org/) with linear/log scale spectrogram + contrast filters.
@@ -212,19 +213,19 @@ View strange binary blobs visually.
 ```
 import Image
 if __name__ == '__main__':
-	img = Image.open('input.png')
-	in_pixels = list(img.getdata())
- 	out_pixels = list()
+    img = Image.open('input.png')
+    in_pixels = list(img.getdata())
+     out_pixels = list()
  
-	for i in range(len(in_pixels)):
-		r = in_pixels[i][0]
-		g = in_pixels[i][1]
-		b = in_pixels[i][2]
-		out_pixels.append( (255-r, 255-g, 255-b) )
+    for i in range(len(in_pixels)):
+        r = in_pixels[i][0]
+        g = in_pixels[i][1]
+        b = in_pixels[i][2]
+        out_pixels.append( (255-r, 255-g, 255-b) )
  
-	out_img = Image.new(img.mode, img.size)
-	out_img.putdata(out_pixels)
-	out_img.save("output_inverted.png", "PNG")
+    out_img = Image.new(img.mode, img.size)
+    out_img.putdata(out_pixels)
+    out_img.save("output_inverted.png", "PNG")
 ```
 
 the image looks like it’s just a random noise we should make sure of it. We can, in fact, measure its randomness. Pixels of each color can appear in each place of the image with equal chance. If it’s false for some colors, we certainly want to look at them. [Here](https://pequalsnp-team.github.io/assets/detectrandomness.php) is a script for that, and the results appears below:
