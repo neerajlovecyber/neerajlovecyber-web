@@ -154,7 +154,7 @@ Use **stegsolve** to identify QR codes, LSB data, or color-filtered patterns.
 
 A great GUI tool that covers a wide range of analysis, some of which is covered by the other tools mentioned above and a lot more including color profiles, planes, Color maps, strings.
 
-**Example Challange:**
+**Example Challange:** Looks like a blank image
 
 ![](src/assets/images/posts/ctf-cheatsheet/stegsolve%20challange.jpg)
 
