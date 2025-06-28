@@ -75,12 +75,19 @@ const {
                   actions.map((action) => (
                     <div class="flex w-full sm:w-auto">
                       <Button {...(action || {})} class="w-full sm:mb-0" />
+                      
                     </div>
                   ))
                 ) : (
                   <Fragment set:html={actions} />
+                  
                 )}
+                
               </div>
+                     <div class="flex justify-center my-8">
+    <script is:inline type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="neerajlovecyber" data-color="#FFDD00" data-emoji=""  data-font="Inter" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+  </div>
+              
             )
           }
         </div>
