@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useDetectAdBlock, AdBlockDetectedWrapper } from "adblock-detect-react";
 
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 // Hook-based component
 export const AdBlockDetector: React.FC<{ mode?: "strict" | "delay" }> = ({ mode = "delay" }) => {
   const adBlockDetected = useDetectAdBlock();
@@ -124,6 +130,12 @@ export const AdBlockDetector: React.FC<{ mode?: "strict" | "delay" }> = ({ mode 
           <button 
             className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-bold shadow-md border border-red-800 transition-all duration-200"
             onClick={() => {
+              if (typeof window !== 'undefined' && window.gtag) {
+                window.gtag('event', 'adblock_continue', {
+                  event_category: 'AdBlock',
+                  event_label: 'User continued without ads'
+                });
+              }
               document.cookie = "adblock-acknowledged=true; max-age=3600; path=/";
               setAcknowledged(true);
             }}
