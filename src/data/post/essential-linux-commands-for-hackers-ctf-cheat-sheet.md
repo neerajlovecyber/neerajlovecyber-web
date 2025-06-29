@@ -252,7 +252,7 @@ history
 
 [Download the cheatsheet (PNG)](https://9b5lpjtmc6gqbi0i.public.blob.vercel-storage.com/essential-linux-commands-for-hackers-ctf-cheat-sheet%20%282%29%20%281%29-OAAEDeducc8le4qZLdCD4N65KNJR4M.png?download=1)
 
-[![](src/assets/images/posts/inpost/essential-linux-commands-for-hackers-ctf-cheat-sheet%20(2).png)](https://9b5lpjtmc6gqbi0i.public.blob.vercel-storage.com/essential-linux-commands-for-hackers-ctf-cheat-sheet%20%282%29%20%281%29-OAAEDeducc8le4qZLdCD4N65KNJR4M.png?download=1)
+[](src/assets/images/posts/inpost/essential-linux-commands-for-hackers-ctf-cheat-sheet%20(2).png)
 
 ## Linux Command-Line Cheatsheet for Hackers
 
