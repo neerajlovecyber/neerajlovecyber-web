@@ -7,6 +7,8 @@ content:
     type: collection
     path: src/data/post
     filename: '{primary}.md'
+    view:
+      primary: slug
     fields:
       - name: title
         label: Title
@@ -16,6 +18,16 @@ content:
         label: draft
         type: boolean
         default: false
+      - name: slug
+        label: slug
+        type: string
+      - name: metadata
+        label: Metadata
+        type: object
+        fields:
+          - name: canonical
+            label: Canonical URL
+            type: string
       - name: excerpt
         label: Excerpt
         type: string
@@ -38,13 +50,7 @@ content:
       - name: category
         label: Category
         type: string
-      - name: metadata
-        label: Metadata
-        type: object
-        fields:
-          - name: canonical
-            label: Canonical URL
-            type: string
+
       - name: body
         label: Body
         type: rich-text
