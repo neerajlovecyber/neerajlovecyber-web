@@ -1,6 +1,6 @@
 ---
 title: Linux Commands for Hackers:Essential Commands Cheat Sheet
-draft: true
+draft: false
 slug: essential-linux-commands-for-hackers-ctf-cheat-sheet
 metadata:
   canonical: https://neerajlovecyber.com/essential-linux-commands-for-hackers-ctf-cheat-sheet
