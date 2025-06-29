@@ -250,7 +250,9 @@ history
 
 ## Download Printable Linux Commands Cheatsheet
 
-[Download the printable cheatsheet (PNG)](https://neerajlovecyber.com/assets/images/essential-linux-commands-for-hackers-ctf-cheat-sheet%20(2).png){:download}
+[Download the cheatsheet (PNG)](https://neerajlovecyber.com/assets/images/essential-linux-commands-for-hackers-ctf-cheat-sheet%20\(2\).png)
+
+![](src/assets/images/posts/inpost/essential-linux-commands-for-hackers-ctf-cheat-sheet%20(2).png)
 
 ## Linux Command-Line Cheatsheet for Hackers
 
