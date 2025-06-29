@@ -8,6 +8,7 @@ excerpt: "Linux Commands for Hackers: Your Essential Cheat Sheet. Perfect for
   cybersecurity beginners, CTF players, and ethical hackers. Master the terminal
   today!"
 publishDate: 2025-06-29 09:42
+image: src/assets/images/posts/essential-linux-commands-for-hackers-ctf-cheat-sheet.png
 tags:
   - linux
   - cheatsheet
