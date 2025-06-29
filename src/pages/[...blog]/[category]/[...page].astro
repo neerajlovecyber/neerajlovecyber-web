@@ -46,7 +46,7 @@ if (currentPage > 1) {
 
     <Headline>{category.title}</Headline>
 
-    <BlogList posts={page.data} >
+    <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>
 </Layout>
