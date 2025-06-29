@@ -34,7 +34,7 @@ This guide is for beginners coming from Windows or GUI-heavy environments who wa
 
 ### 1\. `pwd` — Print Working Directory
 
-```
+```bash
 pwd
 ```
 
@@ -42,7 +42,7 @@ Shows your current location in the filesystem.
 
 ### 2\. `cd` — Change Directory
 
-```
+```bash
 cd /etc
 cd ..     # One level up
 cd ~      # Home directory
@@ -51,7 +51,7 @@ cd -      # Previous directory
 
 ### 3\. `ls` — List Files and Directories
 
-```
+```bash
 ls
 ls -l     # Long listing
 ls -a     # Show hidden files
@@ -59,7 +59,7 @@ ls -a     # Show hidden files
 
 ### 4\. `cat` — Show File Contents
 
-```
+```bash
 cat file.txt
 ```
 
@@ -67,7 +67,7 @@ Use to read simple files like credentials or configs.
 
 ### 5\. `less` — View Long Files
 
-```
+```bash
 less bigfile.txt
 ```
 
@@ -75,153 +75,153 @@ Scroll up/down with arrow keys or space.
 
 ### 6\. `head` / `tail` — View Start or End of Files
 
-```
+```bash
 head /etc/passwd
 tail /var/log/auth.log
 ```
 
 ### 7\. `touch` — Create New File
 
-```
+```bash
 touch notes.txt
 ```
 
 ### 8\. `mkdir` — Make Directory
 
-```
+```bash
 mkdir loot
 mkdir -p recon/web/fuzz
 ```
 
 ### 9\. `cp` — Copy Files and Folders
 
-```
+```bash
 cp file.txt backup.txt
 cp -r dir1 dir2
 ```
 
 ### 10\. `mv` — Move or Rename
 
-```
+```bash
 mv old.txt new.txt
 mv file.txt /tmp/
 ```
 
 ### 11\. `rm` — Remove Files or Directories
 
-```
+```bash
 rm file.txt
 rm -rf folder/
 ```
 
 ### 12\. `find` — Locate Files
 
-```
+```bash
 find / -name "*.conf" 2>/dev/null
 find / -perm -4000 -type f 2>/dev/null # Find SUID binaries
 ```
 
 ### 13\. `grep` — Search Inside Files
 
-```
+```bash
 grep "admin" *.txt
 grep -rin "password" /etc
 ```
 
 ### 14\. `nano` / `vi` — Edit Text Files
 
-```
+```bash
 nano config.txt
 vi script.sh
 ```
 
 ### 15\. `chmod` — Change Permissions
 
-```
+```bash
 chmod +x exploit.sh
 chmod 644 secrets.txt
 ```
 
 ### 16\. `chown` — Change Ownership
 
-```
+```bash
 chown user:group file.txt
 ```
 
 ### 17\. `ps` — View Processes
 
-```
+```bash
 ps aux
 ps -ef | grep apache
 ```
 
 ### 18\. `top` / `htop` — Monitor System Usage
 
-```
+```bash
 top
 htop # If installed
 ```
 
 ### 19\. `df` — Check Disk Space
 
-```
+```bash
 df -h
 ```
 
 ### 20\. `du` — Check Folder Size
 
-```
+```bash
 du -sh *
 ```
 
 ### 21\. `wget` / `curl` — Download Files
 
-```
+```bash
 wget http://example.com/file.sh
 curl -O http://example.com/file.sh
 ```
 
 ### 22\. `sudo` — Run as Root
 
-```
+```bash
 sudo command
 ```
 
 Check accessible commands:
 
-```
+```bash
 sudo -l
 ```
 
 ### 23\. `id` — Show Current User and Groups
 
-```
+```bash
 id
 ```
 
 ### 24\. `whoami` — Show Logged-In User
 
-```
+```bash
 whoami
 ```
 
 ### 25\. `netstat` / `ss` — Check Open Ports
 
-```
+```bash
 netstat -tuln
 ss -tuln
 ```
 
 ### 26\. `hostname` / `uname` — System Info
 
-```
+```bash
 hostname
 uname -a
 ```
 
 ### 27\. `tar` / `zip` — Archive or Extract
 
-```
+```bash
 tar -czvf archive.tar.gz folder/
 tar -xzvf archive.tar.gz
 zip -r out.zip folder/
@@ -230,26 +230,26 @@ unzip out.zip
 
 ### 28\. `useradd` / `passwd` — Add Users
 
-```
+```bash
 sudo useradd hacker
 sudo passwd hacker
 ```
 
 ### 29\. `usermod` — Add User to Group
 
-```
+```bash
 sudo usermod -aG sudo hacker
 ```
 
 ### 30\. `history` — Show Past Commands
 
-```
+```bash
 history
 ```
 
 ## Linux Command-Line Cheatsheet for Hackers
 
-```
+```bash
 ====================[ SYSTEM & USER INFO ]====================
 whoami               → Show current user
 id                   → Display UID, GID, groups
