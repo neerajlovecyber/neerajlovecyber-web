@@ -248,6 +248,10 @@ sudo usermod -aG sudo hacker
 history
 ```
 
+## Download Printable Linux Commands Cheatsheet
+
+[Download the printable cheatsheet (PNG)](https://neerajlovecyber.com/assets/images/essential-linux-commands-for-hackers-ctf-cheat-sheet%20(2).png){:download}
+
 ## Linux Command-Line Cheatsheet for Hackers
 
 ```bash
