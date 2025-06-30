@@ -1,6 +1,8 @@
 ---
 title: "CTF Cheatsheet - Beginners guide to CTF (Capture The Flag) - Checklist "
 draft: false
+metadata:
+  canonical: https://neerajlovecyber.com/ctf-cheatsheet
 excerpt: A practical cheatsheet, checklist, and guide for CTF (Capture The Flag)
   competitions, covering essential techniques, tools, and tips for all major
   challenge categories.
@@ -13,8 +15,6 @@ tags:
   - pentesting
   - security
 category: Security
-metadata:
-  canonical: https://neerajlovecyber.com/ctf-cheatsheet
 ---
 A list of [Capture The Flag](https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security) (CTF) frameworks, libraries, resources and software for started/experienced CTF players 🚩
 
@@ -90,6 +90,7 @@ ORUGS43JONRGC43FGMZGG2LQNBSXE===
 *   **ROT13 / ROT-n**
     
     *   Uses a Caesar shift within the 26 letters of the alphabet
+        
 *   **ROT47**
     
     *   Extends ROT to 94 printable ASCII characters
@@ -112,9 +113,11 @@ ORUGS43JONRGC43FGMZGG2LQNBSXE===
 *   **Substitution Cipher**
     
     *   Each letter is replaced with another fixed letter
+        
 *   **Transposition Cipher**
     
     *   Rearranges the letters of the plaintext
+        
 
 * * *
 
@@ -160,12 +163,15 @@ GAGTTGAAAATATTGCGGCCGCTGGTAATGATAACATTGCGGCATTTG CTACACCGAGGCGTCGGA
 *   **Keyboard Shift**
     
     *   Based on physically shifting keyboard characters (QWERTY mappings)
+        
 *   **Polybius Square**
     
     *   Uses a 5x5 grid to represent letters by coordinates
+        
 *   **Rail Fence Cipher**
     
     *   Zigzag pattern across multiple rows
+        
 *   **Bacon Cipher**
     
 *   Binary-style A/B pattern representing letters
@@ -324,30 +330,35 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     ![](src/assets/images/posts/ctf-cheatsheet/pigpen%20chipher.png)
     
     *   Decoder - [https://www.dcode.fr/pigpen-cipher](https://www.dcode.fr/pigpen-cipher)
+        
 *   **👽 Futurama Cipher**  
     Appeared in the animated series _Futurama_, this cipher uses alien-like symbols. Two versions exist as easter eggs within the show.
     
     ![](src/assets/images/posts/ctf-cheatsheet/Futurama%20Cipher.png)
     
     *   Decoder - [https://www.dcode.fr/futurama-alien-alphabet](https://www.dcode.fr/futurama-alien-alphabet)
+        
 *   **🗡 Hylian Cipher (Twilight Princess)**  
     A symbolic script from _The Legend of Zelda: Twilight Princess_. Mostly decorative but can be decoded to reveal messages.
     
     ![](src/assets/images/posts/ctf-cheatsheet/Hylian%20Cipher%20(Twilight%20Princess).png)
     
     *   Decoder - [https://www.dcode.fr/hylian-language-twilight-princess](https://www.dcode.fr/hylian-language-twilight-princess)
+        
 *   **🌌 Hylian Cipher (Skyward Sword)**  
     Another Hylian variant from _Skyward Sword_, maps symbols directly to English letters, used throughout the game world.
     
     ![](src/assets/images/posts/ctf-cheatsheet/Hylian%20Cipher%20(Skyward%20Cipher).png)
     
     *   Decoder - [https://www.dcode.fr/hylian-language-skyward-sword](https://www.dcode.fr/hylian-language-skyward-sword)
+        
 *   **🌿 Hylian Cipher (Breath of the Wild)**  
     Unique to _Breath of the Wild_, this version is used on signs, tablets, and game items. It has an established decoding chart.
     
     ![](src/assets/images/posts/ctf-cheatsheet/Hylian%20Cipher%20(Breadth%20Of%20The%20Wild).png)
     
     *   Decoder - [https://www.dcode.fr/hylian-language-breath-of-the-wild](https://www.dcode.fr/hylian-language-breath-of-the-wild)
+        
 *   🗡 Dagger Alphabet
     
     A fantasy-themed symbolic script often found in games or fictional lore. It functions as a substitution cipher with symbols representing letters.
@@ -355,6 +366,7 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     ![](src/assets/images/posts/ctf-cheatsheet/Dagger%20Alphabet.png)
     
     *   Decoder - [https://www.dcode.fr/daggers-alphabet](https://www.dcode.fr/daggers-alphabet)
+        
 *   🧙 Gravity Falls Cipher
     
     Used throughout the show _Gravity Falls_, these include Caesar, Atbash, A1Z26, and others. Fans decode hidden messages from end credits and clues.
@@ -368,6 +380,7 @@ BAABAAABBBABAAABAAABABAAABAAABAAAABAAAAAAAABA ABBABABBAAAAABAABAAAABBBAAABBBAABA
     ![](src/assets/images/posts/ctf-cheatsheet/Dancing%20Men%20Cipher.png)
     
     *   Decoder - [https://www.dcode.fr/daggers-alphabet](https://www.dcode.fr/daggers-alphabet)
+        
 
 * * *
 
@@ -497,6 +510,8 @@ _Tools used for solving Forensics challenges_
     
 *   [Volatility](https://github.com/volatilityfoundation/volatility) - An advanced memory forensics framework.
     
+    *   u can find [volatility cheatsheet here](https://neerajlovecyber.com/memory-forensics-volatility-cheatsheet-guide).
+        
 *   [Wireshark](https://www.wireshark.org/) - Tool to analyze pcap or pcapng files.
     
 *   [X-Ways](https://www.x-ways.net/forensics/index-m.html) - Advanced work environment for computer forensic examiners.
@@ -903,6 +918,7 @@ Check [solve section for steganography](#steganography-1).
 _Tools used to create Web challenges_
 
 *   [Metasploit JavaScript Obfuscator](https://github.com/rapid7/metasploit-framework/wiki/How-to-obfuscate-JavaScript-in-Metasploit) - How to obfuscate JavaScript in Metasploit.
+    
 
 ## Resources
 
@@ -1018,6 +1034,7 @@ _Repository of CTF Writeups_
 ### Courses
 
 *   [Roppers Bootcamp](https://www.roppers.org/courses/ctf) - CTF Bootcamp.
+    
 
 * * *
 
